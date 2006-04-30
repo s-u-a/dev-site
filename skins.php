@@ -21,13 +21,13 @@
 	$gui->title = $lang->getEntry('navigation', 'skins');
 	$gui->htmlHead();
 ?>
-<p><?=$lang->getEntry('skins', 'introduction')?><p>
+<p><?=$lang->getEntry('skins', 'introduction')?></p>
 <ul id="skins">
 <?php
 	foreach($skins as $dir=>$skin)
 	{
 ?>
-	<li><a href="skins.php?skin=<?=htmlspecialchars(urlencode($dir))?>"><?=htmlspecialchars($skin)?></a></li>
+	<li><a href="skins.php?skin=<?=htmlspecialchars(urlencode($dir))?>"><?=htmlspecialchars(trim($skin))?></a></li>
 <?php
 	}
 ?>

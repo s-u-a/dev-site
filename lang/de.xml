@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <languagepack language="de">
 	<category name="general">
-		<entry name="title">S-U-A developers’</entry>
+		<entry name="title"><span xml:lang="en"><abbr title="Stars under Attack">S-U-A</abbr> developers’ corner</span></entry>
 	</category>
 	
 	<category name="navigation">
-		<entry name="index">Startsiete</entry>
+		<entry name="index">Startseite</entry>
 		<entry name="news">Neuigkeiten</entry>
 		<entry name="credits">Mitwirkende</entry>
 		<entry name="skins"><![CDATA[<span xml:lang="en">Skins</span>]]></entry>
