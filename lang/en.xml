@@ -19,4 +19,16 @@
 	<category name="index">
 		<entry name="introduction"><![CDATA[Stars Under Attack (S-U-A) is a browser game written in <abbr title="Hypertext Preprocessor">PHP&thinsp;5</abbr>. The main goal of this project is to be more user friendly than other games of this kind by following the <abbr title="World Wide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> guidelines. It uses valid <abbr title="Extensible Markup Language">XHTML</abbr> 1.0 and tries to be flexibly changable using <abbr title="Cascading Stylesheets">CSS</abbr>. Users have got many settings to use the game according to their preferences and available software.]]></entry>
 	</category>
+
+	<category name="websvn">
+		<entry name="redirect"><![CDATA[This page is available on <a href="%s">%1$s</a>.]]></entry>
+	</category>
+
+	<category name="bugs">
+		<entry name="redirect"><![CDATA[This page is available on <a href="%s">%1$s</a>]]></entry>
+	</category>
+
+	<category name="skins">
+		<entry name="introduction"><![CDATA[Here you will find several <abbr title="Stars Under Attack">S-U-A</abbr> skins for download. Feel free to edit them as much as you desire.]]></entry>
+	</category>
 </languagepack>

@@ -43,7 +43,31 @@
 
 		function selectLanguage($language=false)
 		{
-			if(!$this->languageData || !isset($this->languageData['languages'][$language]))
+			if(!$this->languageData)
+			{
+				$this->selectedLanguage = false;
+				return false;
+			}
+
+			if($language === false)
+			{ # Automatically figure out language by using HTTP_ACCEPT_LANGUAGE
+				$desired_languages = array();
+				if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) $desired_languages = preg_split("/[^a-zA-Z]+/", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
+
+				foreach($desired_languages as $dlang)
+				{
+					if(isset($this->languageData['languages'][$dlang]))
+					{
+						$language = $dlang;
+						break;
+					}
+				}
+
+				if($language === false)
+					$language = 'en';
+			}
+
+			if(!isset($this->languageData['languages'][$language]))
 			{
 				$this->selectedLanguage = false;
 				return false;
@@ -149,5 +173,5 @@
 	}
 
 	$lang = new Language();
-	$lang->selectLanguage('en');
+	$lang->selectLanguage();
 ?>
