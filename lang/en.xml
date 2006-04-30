@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<languagepack language="de">
+<languagepack language="en">
 	<category name="general">
 		<entry name="title">S-U-A developers’</entry>
+	</category>
+
+	<category name="navigation">
+		<entry name="index">Home</entry>
+		<entry name="news">News</entry>
+		<entry name="credits">Credits</entry>
+		<entry name="skins">Skins</entry>
+		<entry name="download">Download</entry>
+		<entry name="forum">Forum</entry>
+		<entry name="bugs">Bugtracker</entry>
+		<entry name="websvn"><![CDATA[Web<abbr title="Subversion">SVN</abbr>]]></entry>
+		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions">FAQ</abbr>]]></entry>
 	</category>
 </languagepack>
