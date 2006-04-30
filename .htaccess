@@ -1,0 +1,4 @@
+#RewriteEngine on
+#RewriteRule ^[^/.]+$ /$0.php [QSA]
+
+Options +MultiViews
