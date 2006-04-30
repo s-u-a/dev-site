@@ -6,7 +6,7 @@
 	while(($dir = readdir($dh)) !== false)
 	{
 		if($dir[0] == '#' || $dir[0] == '.') continue;
-		if(!is_dir('skins/'.$dir) || !is_file('skins.unpacked/'.$dir.'/.name')) continue;
+		if(!is_dir('skins.unpacked/'.$dir) || !is_file('skins.unpacked/'.$dir.'/.name')) continue;
 		$skins[$dir] = file_get_contents('skins.unpacked/'.$dir.'/.name');
 	}
 	closedir($dh);
