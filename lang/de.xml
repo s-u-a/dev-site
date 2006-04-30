@@ -4,6 +4,18 @@
 		<entry name="title">S-U-A developers’</entry>
 	</category>
 	
+	<category name="navigation">
+		<entry name="index">Startsiete</entry>
+		<entry name="news">Neuigkeiten</entry>
+		<entry name="credits">Mitwirkende</entry>
+		<entry name="skins"><![CDATA[<span xml:lang="en">Skins</span>]]></entry>
+		<entry name="download">Herunterladen</entry>
+		<entry name="forum">Forum</entry>
+		<entry name="bugs"><![CDATA[<span xml:lang="en">Bugtracker</span>]]></entry>
+		<entry name="websvn"><![CDATA[<span xml:lang="en">Web<abbr title="Subversion">SVN</abbr></span>]]></entry>
+		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions" xml:lang="en"><span xml:lang="de">FAQ</span></abbr>]]></entry>
+	</category>
+	
 	<category name="websvn">
 		<entry name="redirect"><![CDATA[Diese Seite finden Sie unter <a href="%s">%1$s</a>.]]></entry>
 	</category>
