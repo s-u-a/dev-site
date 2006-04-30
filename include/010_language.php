@@ -41,7 +41,7 @@
 			if($recreate) $this->recreate();
 		}
 
-		function selectLanguage($language)
+		function selectLanguage($language=false)
 		{
 			if(!$this->languageData || !isset($this->languageData['languages'][$language]))
 			{
