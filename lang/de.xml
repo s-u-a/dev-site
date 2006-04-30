@@ -3,4 +3,16 @@
 	<category name="general">
 		<entry name="title">S-U-A developers’</entry>
 	</category>
+	
+	<category name="websvn">
+		<entry name="redirect"><![CDATA[Diese Seite finden Sie unter <a href="%s">%1$s</a>.]]></entry>
+	</category>
+	
+	<category name="bugs">
+		<entry name="redirect"><![CDATA[Diese Seite finden Sie unter <a href="%s">%1$s</a>]]></entry>
+	</category>
+	
+	<category name="skins">
+		<entry name="introduction">Hier finden Sie die <![CDATA[<span xml:lang="en">Skins</span> von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr>]]>, die Sie hier herunterladen und nach Belieben bearbeiten können.</entry>
+	</category>
 </languagepack>
