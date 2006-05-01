@@ -33,8 +33,7 @@
 	}
 	else
 	{
-		$selected_lang = $lang->getSelectedLanguage();
-		if(is_file('forum_links/.conf.'.$selected_lang) && is_readable('forum_links/.conf.'.$selected_language) && count($conf_file = preg_split('/(\r)|(\n)|(\r\n)/', file_get_contents('forum_links/.conf.'.$selected_language))))
+		if(is_file('forum_links/.conf') && is_readable('forum_links/.conf') && count($conf_file = preg_split('/(\r)|(\n)|(\r\n)/', file_get_contents('forum_links/.conf'))))
 			$env = 'CF_FORUM_NAME='.escapeshellarg($conf_file[0]).' CF_CONF_DIR='.escapeshellarg($conf_file[1]).' '.$env;
 		$command = $env.' forum_links/'.$call;
 		exec($command, $output, $return);
@@ -57,7 +56,7 @@
 <p class="error"><?=$lang->getEntry('forum', 'error')?></p>
 <?php
 		}
-		
+
 		$gui->htmlFoot();
 		exit(0);
 	}
