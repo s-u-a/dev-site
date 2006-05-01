@@ -19,8 +19,8 @@ dt { float:left; display:block; font-weight:bold; }
 dt:after { content:":\a0"; }
 dd { margin:.5em 0 .5em 2em; text-align:justify; }
 
-h2 { font-size:2em; font-weight:bold; text-align:right; font-variant:small-caps; border-bottom:.075em solid #000; margin:.3em 0; font-family:serif; }
-h3 { font-size:1.5em; font-weight:bold; text-align:right; font-variant:small-caps; border-bottom:.075em solid #000; margin:.3em 0; font-family:serif; }
+h2 { font-size:2em; font-weight:bold; text-align:right; font-variant:small-caps; border-bottom:.095em solid #000; margin:.3em 0; font-family:serif; }
+h3 { font-size:1.5em; font-weight:bold; text-align:right; font-variant:small-caps; border-bottom:.05em solid #000; margin:.3em 0; font-family:serif; }
 h4 { font-size:1em; font-weight:bold; text-align:right; font-variant:small-caps; margin:.3em 0; }
 h5,h6 { font-size:1em; font-weight:bold; text-align:left; margin:.3em 0; }
 

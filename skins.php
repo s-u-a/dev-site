@@ -20,12 +20,18 @@
 			notice("Could not create /cache/.");
 		elseif(!is_dir('cache/skins') && (file_exists('cache/skins') || !is_writeable('cache') || !mkdir('cache/skins', 0770)))
 			notice("Could not create /cache/skins/");
-		elseif((is_file('cache/skins/'.$_GET['skin'].'.tar.bz2') && !is_writeable('cache/skins')) || ((!is_file('cache/skins/'.$_GET['skin'].'.tar.bz2') || filemtime('cache/skins/'.$_GET['skin'].'.tar.bz2') < last_filemtime('skins.unpacked/'.$_GET['skin'])) && !execute('tar -cjhf cache/skins/'.$_GET['skin'].'.tar.bz2 skins.unpacked/'.$_GET['skin'])))
-			notice("Could not create /cache/skins/".$_GET['skin'].".tar.bz2");
 		else
 		{
-			header('Location: '.h_root.'/cache/skins/'.$_GET['skin'].'.tar.bz2', true, 307);
-			die();
+			$old_cwd = getcwd();
+			chdir('skins.unpacked');
+			if((is_file('../cache/skins/'.$_GET['skin'].'.tar.bz2') && !is_writeable('../cache/skins')) || ((!is_file('../cache/skins/'.$_GET['skin'].'.tar.bz2') || filemtime('../cache/skins/'.$_GET['skin'].'.tar.bz2') < last_filemtime($_GET['skin'])) && !execute('tar -cjhf ../cache/skins/'.$_GET['skin'].'.tar.bz2 '.$_GET['skin'])))
+				notice("Could not create /cache/skins/".$_GET['skin'].".tar.bz2");
+			else
+			{
+				header('Location: '.h_root.'/cache/skins/'.$_GET['skin'].'.tar.bz2', true, 307);
+				die();
+			}
+			chdir($old_cwd);
 		}
 	}
 

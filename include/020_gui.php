@@ -55,6 +55,7 @@
 		<ul id="languages">
 <?php
 			$language_list = $lang->getLanguageList();
+			natcasesort($language_list);
 			$url_suffix = substr($_SERVER['REQUEST_URI'], strlen(real_h_root));
 			$url_suffix_split = explode('/', $url_suffix, 3);
 			if(count($url_suffix_split) >= 2 && in_array($url_suffix_split[1], $language_list))
