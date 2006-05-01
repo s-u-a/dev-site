@@ -17,4 +17,10 @@
 
 		return $last_mtime;
 	}
+
+	function execute($command)
+	{
+		exec($command, $output, $return);
+		return ($return == "0");
+	}
 ?>

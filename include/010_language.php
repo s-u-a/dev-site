@@ -51,20 +51,25 @@
 
 			if($language === false)
 			{ # Automatically figure out language by using HTTP_ACCEPT_LANGUAGE
-				$desired_languages = array();
-				if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) $desired_languages = preg_split("/[^a-zA-Z]+/", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
-
-				foreach($desired_languages as $dlang)
+				if(isset($_SERVER['REDIRECT_SUADEV_LANGUAGE']) && isset($this->languageData['languages'][$_SERVER['REDIRECT_SUADEV_LANGUAGE']]))
+					$language = $_SERVER['REDIRECT_SUADEV_LANGUAGE'];
+				else
 				{
-					if(isset($this->languageData['languages'][$dlang]))
-					{
-						$language = $dlang;
-						break;
-					}
-				}
+					$desired_languages = array();
+					if(isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) $desired_languages = preg_split("/[^a-zA-Z]+/", $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 
-				if($language === false)
-					$language = 'en';
+					foreach($desired_languages as $dlang)
+					{
+						if(isset($this->languageData['languages'][$dlang]))
+						{
+							$language = $dlang;
+							break;
+						}
+					}
+
+					if($language === false)
+						$language = 'en';
+				}
 			}
 
 			if(!isset($this->languageData['languages'][$language]))
@@ -118,6 +123,13 @@
 			}
 			closedir($dh);
 			return true;
+		}
+
+		function getLanguageList()
+		{
+			if(!$this->languageData) return false;
+
+			return array_keys($this->languageData['languages']);
 		}
 
 		private function recreate()
@@ -174,4 +186,6 @@
 
 	$lang = new Language();
 	$lang->selectLanguage();
+
+	define('h_root', real_h_root.'/'.$lang->getSelectedLanguage());
 ?>

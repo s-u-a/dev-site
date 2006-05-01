@@ -11,5 +11,5 @@
 
 	if(substr($document_root, -1) == '/')
 		$document_root = substr($document_root, 0, -1);
-	define('h_root', substr(s_root, strlen($document_root)));
+	define('real_h_root', substr(s_root, strlen($document_root)));
 ?>

@@ -1,4 +1,6 @@
-#RewriteEngine on
-#RewriteRule ^[^/.]+$ /$0.php [QSA]
-
 Options +MultiViews
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} ^/de/ [OR]
+RewriteCond %{REQUEST_URI} ^/en/
+RewriteRule ^([^/]+)/(.*)$ /$2 [E=SUADEV_LANGUAGE:$1]

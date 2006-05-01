@@ -53,6 +53,26 @@
 			print "\t\t\t".str_replace("\n", "\n\t\t\t", $content)."\n";
 ?>
 		</div>
+		<ul id="languages">
+<?php
+			$selected_lang = $lang->getSelectedLanguage();
+			foreach($lang->getLanguageList() as $language)
+			{
+				if($language == $selected_lang)
+				{
+?>
+			<li class="active"><?=htmlspecialchars($language)?></li>
+<?php
+				}
+				else
+				{
+?>
+			<li><a href="<?=real_h_root.'/'.htmlspecialchars($language).substr($_SERVER['REQUEST_URI'], strlen(h_root))?>"><?=htmlspecialchars($language)?></a></li>
+<?php
+				}
+			}
+?>
+		</ul>
 	</body>
 </html>
 <?php
