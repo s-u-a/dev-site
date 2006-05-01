@@ -6,7 +6,11 @@
 	# Set environment to simulate CGI
 	$env = array();
 	foreach($_SERVER as $key=>$val)
+	{
+		if(is_array($val)) continue;
+		if(!preg_match('/^[A-Z_]+$/', $key)) continue;
 		$env[] = $key.'='.escapeshellarg($val);
+	}
 	$env = implode(' ', $env);
 
 	$call = 'fo_view';
@@ -23,7 +27,10 @@
 	}
 
 	if(!is_dir('forum_links') || !is_readable('forum_links') || !is_file('forum_links/'.$call) || !is_readable('forum_links/'.$call) || !is_executable('forum_links/'.$call))
+	{
 		$error = true;
+		$output = false;
+	}
 	else
 	{
 		$selected_lang = $lang->getSelectedLanguage();
@@ -37,9 +44,20 @@
 	if($error)
 	{
 		$gui->htmlHead();
+
+		if($output)
+		{
+?>
+<code class="error"><?=preg_replace('/\n|\r|(\r\n)/', "<br />\n", implode('', $output))?></code>
+<?php
+		}
+		else
+		{
 ?>
 <p class="error"><?=$lang->getEntry('forum', 'error')?></p>
 <?php
+		}
+		
 		$gui->htmlFoot();
 		exit(0);
 	}
