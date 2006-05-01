@@ -26,6 +26,18 @@
 
 	function parseNewsXML($fname)
 	{
-		return array('title' => 'test news', 'author' => 'it wasn\'t me!', 'content' => '<p>Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla</p><p>Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla</p>');
+		if(!is_file($fname) || !is_readable($fname)) return false;
+
+		$this_xml = simplexml_load_file($fname);
+		if(!$this_xml) return false;
+
+		$return = array();
+		if(!$this_xml->content) return false;
+		$return['content'] = (string) $this_xml->content[0];
+
+		if($this_xml->title) $return['title'] = trim((string) $this_xml->title[0]);
+		if($this_xml->author) $return['author'] = trim((string) $this_xml->author[0]);
+
+		return $return;
 	}
 ?>

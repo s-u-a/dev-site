@@ -23,6 +23,11 @@
 		<entry name="chat-text"><![CDATA[The game developers’ chat is available on <a href="irc://%s/%s">#%2$s on %1$s</a>. You can meet a developer there nearly at every time of day.]]></entry>
 	</category>
 
+	<category name="news">
+		<entry name="no-news">There’s nothing new.</entry>
+		<entry name="no-title">Untitled</entry>
+	</category>
+
 	<category name="download">
 		<entry name="introduction"><![CDATA[<abbr title="Stars Under Attack">S-U-A</abbr> uses <abbr title="Subversion">SVN</abbr> for version control. See <a href="#svn">below</a> where to find our repository. If you haven’t got a <abbr title="Subversion">SVN</abbr> client, you can also access our repository via the <a href="#websvn">Web<abbr title="Subversion">SVN</abbr></a> interface. Every version is also packed and <a href="#archives">available</a> as a <em>.tar.bz2</em> archive.]]></entry>
 		<entry name="svn-heading"><![CDATA[<abbr title="Subversion">SVN</abbr>]]></entry>

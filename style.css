@@ -46,3 +46,6 @@ strong { font-weight:bold; }
 #languages li.active { font-weight:bold; }
 #languages li.active:before,#languages a:before { content:"["; }
 #languages li.active:after,#languages a:after { content:"]"; }
+
+cite { display:block; text-align:right; font-style:italic; }
+cite:before { content:"\2015\a0"; }

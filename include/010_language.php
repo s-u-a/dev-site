@@ -143,6 +143,7 @@
 			{
 				$this->languageData['files'][$file] = array(filemtime('lang/'.$file), filesize('lang/'.$file));
 				$this_xml = simplexml_load_file('lang/'.$file);
+				if(!$this_xml) continue;
 
 				$attr = $this_xml->attributes();
 				if(!isset($attr['language'])) continue;

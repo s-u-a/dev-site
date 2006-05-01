@@ -1,4 +1,6 @@
 <?php
+	error_reporting(2047);
+
 	# Content type
 	header('Content-type: application/xhtml+xml; charset=UTF-8');
 
