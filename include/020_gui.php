@@ -55,6 +55,11 @@
 		</div>
 		<ul id="languages">
 <?php
+			$language_list = $lang->getLanguageList();
+			$url_suffix = substr($_SERVER['REQUEST_URI'], strlen(real_h_root));
+			$url_suffix_split = explode('/', $url_suffix, 3);
+			if(count($url_suffix_split) >= 2 && in_array($url_suffix_split[1], $language_list))
+				$url_suffix = '/'.(isset($url_suffix_split[2]) ? $url_suffix_split[2] : '');
 			$selected_lang = $lang->getSelectedLanguage();
 			foreach($lang->getLanguageList() as $language)
 			{
@@ -67,7 +72,7 @@
 				else
 				{
 ?>
-			<li><a href="<?=real_h_root.'/'.htmlspecialchars($language).substr($_SERVER['REQUEST_URI'], strlen(h_root))?>"><?=htmlspecialchars($language)?></a></li>
+			<li><a href="<?=real_h_root.'/'.htmlspecialchars($language).$url_suffix?>"><?=htmlspecialchars($language)?></a></li>
 <?php
 				}
 			}

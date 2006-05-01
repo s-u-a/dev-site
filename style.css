@@ -36,8 +36,8 @@ strong { font-weight:bold; }
 
 #content abbr,#content acronym { font-variant:normal; }
 
-#content a { color:#460; text-decoration:underline; }
-#content a:hover,#content a:active,#content a:focus { color:#dda; background-color:#220; margin:0 -2px; padding:0 2px; }
+#content a,#languages a { color:#460; text-decoration:underline; }
+#content a:hover,#content a:active,#content a:focus,#languages a:hover,#languages a:active,#languages a:focus { color:#dda; background-color:#220; margin:0 -2px; padding:0 2px; }
 
 #content { position:relative; z-index:1000; padding:40px 250px 20px 275px; }
 
