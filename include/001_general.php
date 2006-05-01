@@ -2,6 +2,9 @@
 	# Content type
 	header('Content-type: application/xhtml+xml; charset=UTF-8');
 
+	# GZip compression
+	ob_start('ob_gzhandler');
+
 	# Determine h_root
 	if(isset($_SERVER['SCRIPT_FILENAME']) && isset($_SERVER['PHP_SELF']) && substr($_SERVER['SCRIPT_FILENAME'], -strlen($_SERVER['PHP_SELF'])) == $_SERVER['PHP_SELF'])
 		$document_root = substr(realpath($_SERVER['SCRIPT_FILENAME']), 0, -strlen($_SERVER['PHP_SELF']));

@@ -4,3 +4,15 @@ RewriteEngine on
 RewriteCond %{REQUEST_URI} ^/de/ [OR]
 RewriteCond %{REQUEST_URI} ^/en/
 RewriteRule ^([^/]+)/(.*)$ /$2 [E=SUADEV_LANGUAGE:$1]
+
+ExpiresActive on
+ExpiresByType text/css "access plus 2 week"
+ExpiresByType image/jpeg "access plus 2 month"
+ExpiresByType image/png "access plus 2 month"
+ExpiresByType image/gif "access plus 2 month"
+
+<Files ~ "\.(css|gif|jpe?g|png)">
+	Header append Cache-Control "public"
+</Files>
+
+AddOutputFilter DEFLATE css
