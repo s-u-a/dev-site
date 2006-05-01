@@ -3,7 +3,7 @@
 	<category name="general">
 		<entry name="title"><![CDATA[<span xml:lang="en"><abbr title="Stars under Attack">S-U-A</abbr> developers’</span>]]></entry>
 	</category>
-	
+
 	<category name="navigation">
 		<entry name="index">Startseite</entry>
 		<entry name="news">Neuigkeiten</entry>
@@ -12,22 +12,21 @@
 		<entry name="download">Herunterladen</entry>
 		<entry name="forum">Forum</entry>
 		<entry name="bugs"><![CDATA[<span xml:lang="en">Bugtracker</span>]]></entry>
-		<entry name="websvn"><![CDATA[<span xml:lang="en">Web<abbr title="Subversion">SVN</abbr></span>]]></entry>
 		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions" xml:lang="en"><span xml:lang="de">FAQ</span></abbr>]]></entry>
 	</category>
-	
+
 	<category name="index">
 		<entry name="introduction"><![CDATA[<span xml:lang="en">Stars Under Attack (<abbr title="Stars under Attack">S-U-A</abbr>)</span> ist ein <span xml:lang="en">Browser</span>spiel, das in <abbr title="Hypertext Preprocessor" xml:lang="en"><span xml:lang="de">PHP&thinsp;5</span></abbr> geschrieben ist. Das Hauptziel dieses Projekts gegenüber Anderen dieser Art ist, dass es durch die Befolgung der <abbr title="World Wide Web Consortium" xml:lang="en"><span xml:lang="de">W3C</span></abbr>-<abbr title="Web Accessibility Initiative" xml:lang="en"><span xml:lang="de">WAI</span></abbr>-Richtlinien benutzerfreundlicher aufgebaut ist. Es benutzt valides <abbr title="Extensible Markup Language" xml:lang="en"><span xml:lang="de">XHTML</span></abbr> 1.0 und versucht, ein einfach zu änderndes <span xml:lang="en">Design</span> durch die Benutzung von <abbr title="Cascading Stylesheets" xml:lang="en"><span xml:lang="de">CSS</span></abbr> zu haben. Benutzer haben viele Einstellungen, um das Spiel nach ihren Systemeinstellungen und ihrer verfügbaren <span xml:lang="en">Software</span> zu konfigurieren.]]></entry>
 	</category>
-	
+
 	<category name="websvn">
 		<entry name="redirect"><![CDATA[Diese Seite finden Sie unter <a href="%s">%1$s</a>.]]></entry>
 	</category>
-	
+
 	<category name="bugs">
 		<entry name="redirect"><![CDATA[Diese Seite finden Sie unter <a href="%s">%1$s</a>]]></entry>
 	</category>
-	
+
 	<category name="skins">
 		<entry name="introduction">Hier finden Sie die <![CDATA[<span xml:lang="en">Skins</span> von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr>]]>, die Sie hier herunterladen und nach Belieben bearbeiten können.</entry>
 	</category>

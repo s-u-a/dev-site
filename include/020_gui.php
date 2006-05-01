@@ -26,7 +26,6 @@
 			<li<?=_GUI_checkActive('download')?' class="active"':''?>><a href="<?=h_root?>/download"><?=$lang->getEntry('navigation', 'download')?></a></li>
 			<li<?=_GUI_checkActive('forum')?' class="active"':''?>><a href="<?=h_root?>/forum"><?=$lang->getEntry('navigation', 'forum')?></a></li>
 			<li<?=_GUI_checkActive('bugs')?' class="active"':''?>><a href="<?=h_root?>/bugs"><?=$lang->getEntry('navigation', 'bugs')?></a></li>
-			<li<?=_GUI_checkActive('websvn')?' class="active"':''?>><a href="<?=h_root?>/websvn"><?=$lang->getEntry('navigation', 'websvn')?></a></li>
 			<li<?=_GUI_checkActive('faq')?' class="active"':''?>><a href="<?=h_root?>/faq"><?=$lang->getEntry('navigation', 'faq')?></a></li>
 		</ol>
 		<div id="content">

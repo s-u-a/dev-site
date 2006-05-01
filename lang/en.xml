@@ -12,7 +12,6 @@
 		<entry name="download">Download</entry>
 		<entry name="forum">Forum</entry>
 		<entry name="bugs">Bugtracker</entry>
-		<entry name="websvn"><![CDATA[Web<abbr title="Subversion">SVN</abbr>]]></entry>
 		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions">FAQ</abbr>]]></entry>
 	</category>
 
