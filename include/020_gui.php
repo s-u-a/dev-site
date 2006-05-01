@@ -61,7 +61,7 @@
 			if(count($url_suffix_split) >= 2 && in_array($url_suffix_split[1], $language_list))
 				$url_suffix = '/'.(isset($url_suffix_split[2]) ? $url_suffix_split[2] : '');
 			$selected_lang = $lang->getSelectedLanguage();
-			foreach($lang->getLanguageList() as $language)
+			foreach($language_list as $language)
 			{
 				if($language == $selected_lang)
 				{

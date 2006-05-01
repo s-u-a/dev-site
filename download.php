@@ -14,14 +14,14 @@
 
 <?php
 	$archives = array();
-	if(is_dir('archives') && is_readable('archives'))
+	if(is_dir('releases') && is_readable('releases'))
 	{
-		$dh = opendir('archives');
+		$dh = opendir('releases');
 		while(($fname = readdir($dh)) !== false)
 		{
 			if($fname[0] == '.' || $fname[0] == '#') continue;
-			if(!is_file('archives/'.$fname) || !is_readable('archives/'.$fname)) continue;
-			$archives[$fname] = filemtime('archives/'.$fname);
+			if(!is_file('releases/'.$fname) || !is_readable('releases/'.$fname)) continue;
+			$archives[$fname] = filemtime('releases/'.$fname);
 		}
 		closedir($dh);
 	}
@@ -57,7 +57,7 @@
 		foreach($archives as $archive)
 		{
 ?>
-	<li><a href="releases/<?=htmlspecialchars($current)?>"><?=htmlspecialchars($current)?></a></li>
+	<li><a href="releases/<?=htmlspecialchars($archive)?>"><?=htmlspecialchars($archive)?></a></li>
 <?php
 		}
 ?>
