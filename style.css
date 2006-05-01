@@ -42,7 +42,7 @@ strong { font-weight:bold; }
 #content { position:relative; z-index:1000; padding:40px 250px 20px 275px; }
 
 #languages { display:block; position:fixed; bottom:0; right:1em; z-index:1600; }
-#languages li { display:inline; }
+#languages li { display:inline; margin:0 .2em; }
 #languages li.active { font-weight:bold; }
 #languages li.active:before,#languages a:before { content:"["; }
 #languages li.active:after,#languages a:after { content:"]"; }
