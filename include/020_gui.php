@@ -87,7 +87,7 @@
 
 	function _GUI_checkActive($cat)
 	{
-		return ($_SERVER['PHP_SELF'] == h_root.'/'.$cat.'.php');
+		return ($_SERVER['PHP_SELF'] == real_h_root.'/'.$cat.'.php');
 	}
 
 	$gui = new GUI;
