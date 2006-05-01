@@ -20,7 +20,7 @@
 		<entry name="forum-heading">Forum</entry>
 		<entry name="forum-text"><![CDATA[In <a href="%s">unserem Forum</a> können Sie über neue <span xml:lang="en">Features</span> diskutieren oder <span xml:lang="en">Bugs</span> melden, über die Sie sich nicht sicher sind. Wir benutzen ein <span xml:lang="en">Classic</span> Forum, welches ein Forum mit der klassischen Forumsstruktur ist (nicht wie die <span xml:lang="en">Boards</span>, die sehr oft verwendet werden), was zum besseren Verständins größerer Diskussionen führt.]]></entry>
 		<entry name="chat-heading"><![CDATA[<span xml:lang="en">Chat</span>]]></entry>
-		<entry name="chat-text"><![CDATA[Der <span xml:lang="en">Chat</span> der Entwickler von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr> ist <a href="irc://%s/%s">%2$s auf %1$s</a>. Sie können dort nahezu jederzeit einen Entwickler von <abbr title="Stars under Attack" xml:lang="en">S-U-A</abbr> finden.]]></entry>
+		<entry name="chat-text"><![CDATA[Der <span xml:lang="en">Chat</span> der Entwickler von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr> ist <a href="irc://%s/%s">#%2$s auf %1$s</a>. Sie können dort nahezu jederzeit einen Entwickler von <abbr title="Stars under Attack" xml:lang="en">S-U-A</abbr> finden.]]></entry>
 	</category>
 	
 	<category name="news">
