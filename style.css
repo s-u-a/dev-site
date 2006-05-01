@@ -1,0 +1,39 @@
+* { margin:0; padding:0; font-size:1em; border-style:none; text-decoration:none; font-weight:inherit; font-family:inherit; font-style:inherit; }
+
+html { background-image:url(images/satellit_cut.jpg); background-repeat:no-repeat; background-position:right center; background-attachment:fixed; width:100%; height:100%; }
+body { background-image:url(images/left_border.png); background-repeat:repeat-y; width:100%; min-height:100%; }
+
+html { color:#000; background-color:#fff; font-family:sans-serif; }
+
+#navigation { position:fixed; top:51px; padding:139px 0 0 0; left:0; width:513px; margin:0; z-index:1500; background-image:url(images/curtain2.png); background-repeat:no-repeat; }
+#navigation li { display:block; width:200px; height:25px; margin:.25em 0; }
+#navigation a { display:block; width:166px; height:25px; background-image:url(images/button.png); background-repeat:no-repeat; background-position:-20px 0; text-align:right; color:#dda; font-weight:bold; font-variant:small-caps; line-height:14px; vertical-align:center; padding:4px 10px 4px 4px; }
+#navigation a:hover,#navigation a:focus,#navigation a:active,#navigation .active a { background-position:0 0; width:186px; }
+
+h1 { position:fixed; top:0; left:0; height:51px; right:0; z-index:2000; background-image:url(images/curtain_fadeout.png); background-repeat:repeat-x; }
+h1 span { display:block; height:0; padding-top:51px; overflow:hidden; background-image:url(images/curtain1.png); background-repeat:no-repeat; }
+p { text-align:justify; margin:1em 0; text-indent:2em; }
+ul,ol { margin:1em 0 1em 35px; }
+dl { margin:1em 0; }
+dt { float:left; display:block; font-weight:bold; }
+dt:after { content:":\a0"; }
+dd { margin:.5em 0 .5em 2em; text-align:justify; }
+
+h2 { font-size:2em; font-weight:bold; text-align:right; font-variant:small-caps; border-bottom:.075em solid #000; margin:.3em 0; font-family:serif; }
+h3 { font-size:1.5em; font-weight:bold; text-align:right; font-variant:small-caps; border-bottom:.075em solid #000; margin:.3em 0; font-family:serif; }
+h4 { font-size:1em; font-weight:bold; text-align:right; font-variant:small-caps; margin:.3em 0; }
+h5,h6 { font-size:1em; font-weight:bold; text-align:left; margin:.3em 0; }
+
+table { border-spacing:0; border-collapse:collapse; width:100%; margin:1em 0; }
+th,td { border:.1em solid #000; }
+
+input,button,select,textarea { border:.1em solid #000; }
+form dt { width:50%; }
+form dd { margin-left:50%; }
+
+em { font-style:italic; }
+strong { font-weight:bold; }
+
+abbr,acronym { font-variant:normal; }
+
+#content { position:relative; z-index:1000; padding:40px 250px 20px 275px; }

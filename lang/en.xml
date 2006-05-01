@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <languagepack language="en">
 	<category name="general">
-		<entry name="title">S-U-A developers’</entry>
+		<entry name="title"><![CDATA[<abbr title="Stars Under Attack">S-U-A</abbr> developers’]]></entry>
 	</category>
 
 	<category name="navigation">
