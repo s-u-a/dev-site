@@ -16,3 +16,5 @@ ExpiresByType image/gif "access plus 2 month"
 </Files>
 
 AddOutputFilter DEFLATE css
+
+AcceptPathInfo Default
