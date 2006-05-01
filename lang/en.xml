@@ -36,6 +36,10 @@
 		<entry name="no-archive">Currently no archive is available.</entry>
 	</category>
 
+	<category name="forum">
+		<entry name="error">The forum has not been configured yet.</entry>
+	</category>
+
 	<category name="bugs">
 		<entry name="redirect"><![CDATA[This page is available on <a href="%s">%1$s</a>]]></entry>
 	</category>

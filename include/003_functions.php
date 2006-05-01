@@ -23,4 +23,9 @@
 		exec($command, $output, $return);
 		return ($return == "0");
 	}
+
+	function parseNewsXML($fname)
+	{
+		return array('title' => 'test news', 'author' => 'it wasn\'t me!', 'content' => '<p>Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla</p><p>Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla Blablablabla</p>');
+	}
 ?>

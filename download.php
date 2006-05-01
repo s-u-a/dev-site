@@ -44,7 +44,7 @@
 	else
 	{
 ?>
-<p><?=$lang->getEntry('download', 'no-archive')?></p>
+<p class="nothing-to-do"><?=$lang->getEntry('download', 'no-archive')?></p>
 <?php
 	}
 
