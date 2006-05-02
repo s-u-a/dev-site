@@ -14,6 +14,25 @@
 	$env = implode(' ', $env);
 
 	$call = 'fo_view';
+	if(isset($_SERVER['PATH_INFO']))
+	{
+		$pinfo = $_SERVER['PATH_INFO'];
+		if(substr($pinfo, 0, 1) == '/') $pinfo = substr($pinfo, 1);
+		$pinfo = explode('/', $pinfo);
+
+		if($pinfo[0] == 'user')
+		{
+			# Authentifizieren
+
+			array_shift($pinfo);
+		}
+		if($pinfo[0] == 'archive') $call = 'fo_arcview';
+		elseif($pinfo[0] == 'post') $call = 'fo_post';
+		elseif($pinfo[0] == 'register' || $pinfo[0] == 'usermanagement') $call = 'fo_usermanagement';
+		elseif($pinfo[0] == 'userconf') $call = 'fo_userconf';
+		elseif($pinfo[0] == 'vote') $call = 'fo_vote';
+	}
+
 	if(isset($_SERVER['SUADEV_FORUM_CALL']))
 	{
 		switch($_SERVER['SUADEV_FORUM_CALL'])

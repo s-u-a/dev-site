@@ -8,6 +8,9 @@
 	ob_start('ob_gzhandler');
 
 	# Determine h_root
+	if(isset($_SERVER['PATH_INFO']) && isset($_SERVER['PHP_SELF']) && substr($_SERVER['PHP_SELF'], -strlen($_SERVER['PATH_INFO'])) == $_SERVER['PATH_INFO'])
+		$_SERVER['PHP_SELF'] = substr($_SERVER['PHP_SELF'], 0, -strlen($_SERVER['PATH_INFO']));
+
 	if(isset($_SERVER['SCRIPT_FILENAME']) && isset($_SERVER['PHP_SELF']) && substr($_SERVER['SCRIPT_FILENAME'], -strlen($_SERVER['PHP_SELF'])) == $_SERVER['PHP_SELF'])
 		$document_root = substr(realpath($_SERVER['SCRIPT_FILENAME']), 0, -strlen($_SERVER['PHP_SELF']));
 	elseif(isset($_SERVER['DOCUMENT_ROOT']))

@@ -23,7 +23,7 @@
 	if(count($news) <= 0)
 	{
 ?>
-<p class="error"><?=$lang->getEntry('news', 'no-news')?></p>
+<p class="nothing-to-do"><?=$lang->getEntry('news', 'no-news')?></p>
 <?php
 	}
 	else

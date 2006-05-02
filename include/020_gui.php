@@ -13,7 +13,7 @@
 	<head>
 		<title><?=(strlen(trim($this->title)) > 0) ? htmlspecialchars(strip_tags(trim($this->title))).' – ' : ''?><?=strip_tags($lang->getEntry('general', 'title'))?></title>
 		<style type="text/css">
-			@import url(<?=h_root?>/style.css);
+			@import url(<?=real_h_root?>/style.css);
 		</style>
 	</head>
 	<body>
