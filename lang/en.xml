@@ -10,15 +10,12 @@
 		<entry name="credits">Persons</entry>
 		<entry name="skins">Skins</entry>
 		<entry name="download">Download</entry>
-		<entry name="forum">Forum</entry>
 		<entry name="bugs">Bugtracker</entry>
 		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions">FAQ</abbr>]]></entry>
 	</category>
 
 	<category name="index">
 		<entry name="introduction"><![CDATA[Stars Under Attack (S-U-A) is a browser game written in <abbr title="Hypertext Preprocessor">PHP&thinsp;5</abbr>. The main goal of this project is to be more user friendly than other games of this kind by following the <abbr title="World Wide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> guidelines. It uses valid <abbr title="Extensible Markup Language">XHTML</abbr> 1.0 and tries to be flexibly changable using <abbr title="Cascading Stylesheets">CSS</abbr>. Users have got many settings to use the game according to their preferences and available software.]]></entry>
-		<entry name="forum-heading">Forum</entry>
-		<entry name="forum-text"><![CDATA[In <a href="%s">our forum</a>, you can discuss new features or report bugs that you’re not sure about. We use a classic forum, that is, a forum with classic threaded view (not like in those bulletin boards) to make large discussions easier to understand.]]></entry>
 		<entry name="chat-heading">Chat</entry>
 		<entry name="chat-text"><![CDATA[The game developers’ chat is available on <a href="irc://%s/%s">#%2$s on %1$s</a>. You can meet a developer there nearly at every time of day.]]></entry>
 	</category>
@@ -39,10 +36,6 @@
 		<entry name="current-archive">Current version</entry>
 		<entry name="old-archives">Attic</entry>
 		<entry name="no-archive">Currently no archive is available.</entry>
-	</category>
-
-	<category name="forum">
-		<entry name="error">The forum has not been configured yet.</entry>
 	</category>
 
 	<category name="bugs">
