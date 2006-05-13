@@ -95,8 +95,8 @@
 			$category = array_shift($args);
 			$entry = array_shift($args);
 
-			if(!isset($this->languageData['languages'][$this->getSelectedLanguage()][$category])) return false;
-			if(!isset($this->languageData['languages'][$this->getSelectedLanguage()][$category][$entry])) return false;
+			if(!isset($this->languageData['languages'][$this->getSelectedLanguage()][$category]) || !isset($this->languageData['languages'][$this->getSelectedLanguage()][$category][$entry]))
+				return '{'.$one.'/'.$two.'}';
 
 			return vsprintf($this->languageData['languages'][$this->getSelectedLanguage()][$category][$entry], $args);
 		}

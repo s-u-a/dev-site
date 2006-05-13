@@ -18,6 +18,13 @@
 		<entry name="introduction"><![CDATA[Stars Under Attack (S-U-A) is a browser game written in <abbr title="Hypertext Preprocessor">PHP&thinsp;5</abbr>. The main goal of this project is to be more user friendly than other games of this kind by following the <abbr title="World Wide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> guidelines. It uses valid <abbr title="Extensible Markup Language">XHTML</abbr> 1.0 and tries to be flexibly changable using <abbr title="Cascading Stylesheets">CSS</abbr>. Users have got many settings to use the game according to their preferences and available software.]]></entry>
 		<entry name="chat-heading">Chat</entry>
 		<entry name="chat-text"><![CDATA[The game developers’ chat is available on <a href="irc://%s/%s">#%2$s on %1$s</a>. You can meet a developer there nearly at every time of day.]]></entry>
+		<entry name="mailinglist-heading">Mailing list</entry>
+		<entry name="mailinglist-text">In our mailing list, you can discuss new features or report bugs that you’re not sure about. Modern mail clients support threaded view, so the mailing list replaces a forum.</entry>
+		<entry name="mailinglist-email">E-mail address</entry>
+		<entry name="mailinglist-subscribe">Subscribe</entry>
+		<entry name="mailinglist-unsubscribe">Unsubscribe</entry>
+		<entry name="mailinglist-successful">The requested action has been performed successfully.</entry>
+		<entry name="mailinglist-error">An error occured during performing the requested action.</entry>
 	</category>
 
 	<category name="news">

@@ -30,6 +30,8 @@ th,td { border:.1em solid #000; }
 input,button,select,textarea { border:.1em solid #000; }
 form dt { width:50%; }
 form dd { margin-left:50%; }
+form ul { text-align:center; }
+form li { display:inline; }
 
 em { font-style:italic; }
 strong { font-weight:bold; }
