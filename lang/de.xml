@@ -10,15 +10,12 @@
 		<entry name="credits">Mitwirkende</entry>
 		<entry name="skins"><![CDATA[<span xml:lang="en">Skins</span>]]></entry>
 		<entry name="download">Herunterladen</entry>
-		<entry name="forum">Forum</entry>
 		<entry name="bugs"><![CDATA[<span xml:lang="en">Bugtracker</span>]]></entry>
 		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions" xml:lang="en"><span xml:lang="de">FAQ</span></abbr>]]></entry>
 	</category>
 
 	<category name="index">
 		<entry name="introduction"><![CDATA[<span xml:lang="en">Stars Under Attack (<abbr title="Stars under Attack">S-U-A</abbr>)</span> ist ein <span xml:lang="en">Browser</span>spiel, das in <abbr title="Hypertext Preprocessor" xml:lang="en"><span xml:lang="de">PHP&thinsp;5</span></abbr> geschrieben ist. Das Hauptziel dieses Projekts gegenüber Anderen dieser Art ist, dass es durch die Befolgung der <abbr title="World Wide Web Consortium" xml:lang="en"><span xml:lang="de">W3C</span></abbr>-<abbr title="Web Accessibility Initiative" xml:lang="en"><span xml:lang="de">WAI</span></abbr>-Richtlinien benutzerfreundlicher aufgebaut ist. Es benutzt valides <abbr title="Extensible Markup Language" xml:lang="en"><span xml:lang="de">XHTML</span></abbr> 1.0 und versucht, ein einfach zu änderndes <span xml:lang="en">Design</span> durch die Benutzung von <abbr title="Cascading Stylesheets" xml:lang="en"><span xml:lang="de">CSS</span></abbr> zu haben. Benutzer haben viele Einstellungen, um das Spiel nach ihren Systemeinstellungen und ihrer verfügbaren <span xml:lang="en">Software</span> zu konfigurieren.]]></entry>
-		<entry name="forum-heading">Forum</entry>
-		<entry name="forum-text"><![CDATA[In <a href="%s">unserem Forum</a> können Sie über neue <span xml:lang="en">Features</span> diskutieren oder <span xml:lang="en">Bugs</span> melden, über die Sie sich nicht sicher sind. Wir benutzen ein <span xml:lang="en">Classic</span> Forum, welches ein Forum mit der klassischen Forumsstruktur ist (nicht wie die <span xml:lang="en">Boards</span>, die sehr oft verwendet werden), was zum besseren Verständins größerer Diskussionen führt.]]></entry>
 		<entry name="chat-heading"><![CDATA[<span xml:lang="en">Chat</span>]]></entry>
 		<entry name="chat-text"><![CDATA[Der <span xml:lang="en">Chat</span> der Entwickler von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr> ist <a href="irc://%s/%s">#%2$s auf %1$s</a>. Sie können dort nahezu jederzeit einen Entwickler von <abbr title="Stars under Attack" xml:lang="en">S-U-A</abbr> finden.]]></entry>
 	</category>
@@ -29,20 +26,16 @@
 	</category>
 
 	<category name="download">
-		<entry name="introduction"><![CDATA[<abbr title="Stars Under Attack">S-U-A</abbr> benutzt <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr> zur Versionsverwaltung. Siehe auch <a href="#svn">unten</a>, wo Sie das <span xml:lang="en">Repository</span> finden. Wenn Sie keinen <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr>-<span xml:lang="en">Client</span> haben, können sie auch die <a href="#websvn"><span xml:lang="en">Web</span><abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr></a>-Oberfläche benutzen. Jede Version des Spiels ist ebenfalls als <em>.tar.bz2</em>-Archiv gepackt und <a href="#archives">verfügbar</a>.]]></entry>
+		<entry name="introduction"><![CDATA[<abbr title="Stars Under Attack">S-U-A</abbr> benutzt <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr> zur Versionsverwaltung. Siehe auch <a href="#svn">unten</a>, wo Sie das <span xml:lang="en">Repository</span> finden. Wenn Sie keinen <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr>-<span xml:lang="en">Client</span> haben, können Sie auch die <a href="#websvn"><span xml:lang="en">Web</span><abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr></a>-Oberfläche benutzen. Jede Version des Spiels ist ebenfalls als <em>.tar.bz2</em>-Archiv gepackt und <a href="#archives">verfügbar</a>.]]></entry>
 		<entry name="svn-heading"><![CDATA[<abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr>]]></entry>
 		<entry name="svn-text"><![CDATA[ Unser <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr>-<span xml:alng="en">Repository</span> finden Sie unter <a href="%s">%1$s</a>. Bitte bedenken Sie, dass die Entwickler dieses <span xml:lang="en">Repository</span> ebenfalls benutzen, um aktuelle, ungeteste Versionen auszutauschen. Es kann also sein, dass die Version ihres <span xml:lang="en">trunk</span>s überhaupt nicht funktioniert.]]></entry>
 		<entry name="websvn-heading"><![CDATA[<span xml:lang="en">Web</span><abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr>]]></entry>
-		<entry name="websvn-text"><![CDATA[Falls Ihr <span xml:lang="en">Browser</span> kein <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr> unterstützt, oder wenn Sie sich nur eine Datei ansehen oder zwei Versionen vergleichen wollen, ist das <span xml:lang="en">Web</span><abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr> über <abbr title="Hypertext Transfer Protocoll" xml:lang="en"><span xml:lang="en">HTTP</span></abbr> verfügbar.]]></entry>
+		<entry name="websvn-text"><![CDATA[Falls Ihr <span xml:lang="en">Browser</span> kein <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr> unterstützt, oder wenn Sie sich nur eine Datei ansehen oder zwei Versionen vergleichen wollen, ist das <a href="%s"><span xml:lang="en">Web</span><abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr></a> über <abbr title="Hypertext Transfer Protocoll" xml:lang="en"><span xml:lang="en">HTTP</span></abbr> verfügbar.]]></entry>
 		<entry name="archives-heading">Archive</entry>
 		<entry name="archives-text"><![CDATA[Jedes mal, wenn ein <span xml:lang="en">Tag</span> im <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr>-<span xml:lang="en">Repository</span> anglelgt wird, wird dieses in ein <em>.tar.bz2</em>-Archiv verpackt, welches Sie dann herunterladen können. Beachten Sie bitte, dass ein solches Archiv nicht unbedingt die aktuellsten <span xml:lang="en">Bugfixes</span> enthält.]]></entry>
 		<entry name="current-archive">Aktuelles Archiv</entry>
 		<entry name="old-archives">Alte Archive</entry>
 		<entry name="no-archive">Zur Zeit ist kein Archiv vefügbar.</entry>
-	</category>
-
-	<category name="forum">
-		<entry name="error">Das Forum ist noch nicht konfiguriert worden.</entry>
 	</category>
 
 	<category name="bugs">
