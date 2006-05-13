@@ -18,3 +18,7 @@ ExpiresByType image/gif "access plus 2 month"
 AddOutputFilter DEFLATE css
 
 AcceptPathInfo Default
+
+<Files mlmmj.php>
+	php_flag register_long_arrays On
+</Files>

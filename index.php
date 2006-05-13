@@ -40,8 +40,8 @@
 		<dd><input type="text" name="email" id="i-email" /></dd>
 	</dl>
 	<ul>
-		<li><button type="submit" value="subscribe"><?=$lang->getEntry('index', 'mailinglist-subscribe')?></button><input name="mailinglist" type="hidden" value="sua-dev@s-u-a.net" /><input name="redirect_failure" type="hidden" value="http://<?=htmlspecialchars($_SERVER['HTTP_HOST'].h_root.'/?mlsuccess=0')?>#mailinglist" /><input name="redirect_success" type="hidden" value="http://<?=htmlspecialchars($_SERVER['HTTP_HOST'].h_root.'/?mlsuccess=0')?>#mailinglist" /></li>
-		<li><button type="submit" value="unsubcribe"><?=$lang->getEntry('index', 'mailinglist-unsubscribe')?></button></li>
+		<li><button name="job" type="submit" value="subscribe"><?=$lang->getEntry('index', 'mailinglist-subscribe')?></button><input name="mailinglist" type="hidden" value="sua-dev@s-u-a.net" /><input name="redirect_failure" type="hidden" value="http://<?=htmlspecialchars($_SERVER['HTTP_HOST'].h_root.'/?mlsuccess=0')?>#mailinglist" /><input name="redirect_success" type="hidden" value="http://<?=htmlspecialchars($_SERVER['HTTP_HOST'].h_root.'/?mlsuccess=0')?>#mailinglist" /></li>
+		<li><button name="job" type="submit" value="unsubcribe"><?=$lang->getEntry('index', 'mailinglist-unsubscribe')?></button></li>
 	</ul>
 </form>
 <?php
