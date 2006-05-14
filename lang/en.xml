@@ -32,6 +32,18 @@
 		<entry name="no-title">Untitled</entry>
 	</category>
 
+	<category name="credits">
+		<entry name="cdauth-work">Idea, programming, organisation, and administration</entry>
+		<entry name="rmueller-work">Finances, design, the game’s home page, items, German translation of the developers’ site</entry>
+		<entry name="soltari-work">Moderation, testing</entry>
+		<entry name="geki-work">Look of the game’s home page</entry>
+		<entry name="barade-work">Several item descriptions</entry>
+	</category>
+
+	<category name="skins">
+		<entry name="introduction"><![CDATA[Here you will find several <abbr title="Stars Under Attack">S-U-A</abbr> skins for download. Feel free to edit them as much as you desire.]]></entry>
+	</category>
+
 	<category name="download">
 		<entry name="introduction"><![CDATA[<abbr title="Stars Under Attack">S-U-A</abbr> uses <abbr title="Subversion">SVN</abbr> for version control. See <a href="#svn">below</a> where to find our repository. If you haven’t got a <abbr title="Subversion">SVN</abbr> client, you can also access our repository via the <a href="#websvn">Web<abbr title="Subversion">SVN</abbr></a> interface. Every version is also packed and <a href="#archives">available</a> as a <em>.tar.bz2</em> archive.]]></entry>
 		<entry name="svn-heading"><![CDATA[<abbr title="Subversion">SVN</abbr>]]></entry>
@@ -47,9 +59,5 @@
 
 	<category name="bugs">
 		<entry name="redirect"><![CDATA[This page is available on <a href="%s">%1$s</a>]]></entry>
-	</category>
-
-	<category name="skins">
-		<entry name="introduction"><![CDATA[Here you will find several <abbr title="Stars Under Attack">S-U-A</abbr> skins for download. Feel free to edit them as much as you desire.]]></entry>
 	</category>
 </languagepack>
