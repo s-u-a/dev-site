@@ -25,7 +25,7 @@
 			<li<?=_GUI_checkActive('skins')?' class="active"':''?>><a href="<?=h_root?>/skins"><?=$lang->getEntry('navigation', 'skins')?></a></li>
 			<li<?=_GUI_checkActive('download')?' class="active"':''?>><a href="<?=h_root?>/download"><?=$lang->getEntry('navigation', 'download')?></a></li>
 			<li<?=_GUI_checkActive('faq')?' class="active"':''?>><a href="<?=h_root?>/faq"><?=$lang->getEntry('navigation', 'faq')?></a></li>
-			<li<?=_GUI_checkActive('bugs')?' class="active"':''?>><a href="<?=h_root?>/bugs"><?=$lang->getEntry('navigation', 'bugs')?></a></li>
+			<li<?=_GUI_checkActive('bugs_index')?' class="active"':''?>><a href="<?=h_root?>/bugs_index"><?=$lang->getEntry('navigation', 'bugs')?></a></li>
 		</ol>
 		<div id="content">
 <?php
