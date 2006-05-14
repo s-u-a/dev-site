@@ -5,7 +5,7 @@ body { background-image:url(images/left_border.png); background-repeat:repeat-y;
 
 html { color:#000; background-color:#fff; font-family:sans-serif; }
 
-#navigation { position:fixed; top:51px; padding:139px 0 0 0; left:0; width:275px; margin:0; z-index:1500; background-image:url(images/curtain2.png); background-repeat:no-repeat; }
+#navigation { position:fixed; top:51px; padding:139px 0 0 0; left:0; width:275px; min-height:253px; margin:0; z-index:1500; background-image:url(images/curtain2.png); background-repeat:no-repeat; }
 #navigation li { display:block; width:200px; height:25px; margin:.25em 0; }
 #navigation a { display:block; width:166px; height:25px; background-image:url(images/button.png); background-repeat:no-repeat; background-position:-20px 0; text-align:right; color:#dda; font-weight:bold; font-variant:small-caps; line-height:14px; vertical-align:middle; padding:4px 10px 4px 4px; }
 #navigation a:hover,#navigation a:focus,#navigation a:active,#navigation .active a { background-position:0 0; width:186px; }
