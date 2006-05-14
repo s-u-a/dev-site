@@ -71,7 +71,7 @@
 				else
 				{
 ?>
-			<li><a href="<?=real_h_root.'/'.htmlspecialchars($language).$url_suffix?>"><?=htmlspecialchars($language)?></a></li>
+			<li><a href="<?=real_h_root.'/'.htmlspecialchars($language).$url_suffix?>" rel="alternate" hreflang="<?=htmlspecialchars($language)?>"><?=htmlspecialchars($language)?></a></li>
 <?php
 				}
 			}
