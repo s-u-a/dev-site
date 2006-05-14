@@ -27,7 +27,7 @@ h5,h6 { font-size:1em; font-weight:bold; text-align:left; margin:.3em 0; }
 table { border-spacing:0; border-collapse:collapse; width:100%; margin:1em 0; }
 th,td { border:.1em solid #000; }
 
-input,button,select,textarea { border:.1em solid #000; }
+input,button,select,textarea { border:.1em solid #000; padding:.1em .2em; }
 form dt { width:50%; }
 form dd { margin-left:50%; }
 form ul { text-align:center; }
