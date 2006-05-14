@@ -31,6 +31,14 @@
 		<entry name="no-news">Derzeit sind keine Neuigkeiten vorhanden.</entry>
 		<entry name="no-title">Kein Titel</entry>
 	</category>
+	
+	<category name="credits">
+		<entry name="cdauth-work">Idee, Programmierung, Organisation und Verwaltung</entry>
+		<entry name="rmueller-work"><![CDATA[Finanzen, <span xml:lang="en">Design</span>, Hauptseite des Spiels, <span xml:lang="en">Items</span>, deutsche Übersetzung der Projektseite]]></entry>
+		<entry name="soltari-work"><![CDATA[Moderation, <span xml:lang="en">Testing</span>]]></entry>
+		<entry name="geki-work"><![CDATA[<span xml:lang="en">Design</span> der Hauptseite des Spiels]]></entry>
+		<entry name="barade-work">Diverse Schiffsbeschreibungen</entry>
+	</category>
 
 	<category name="download">
 		<entry name="introduction"><![CDATA[<abbr title="Stars Under Attack">S-U-A</abbr> benutzt <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr> zur Versionsverwaltung. Siehe auch <a href="#svn">unten</a>, wo Sie das <span xml:lang="en">Repository</span> finden. Wenn Sie keinen <abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr>-<span xml:lang="en">Client</span> haben, können Sie auch die <a href="#websvn"><span xml:lang="en">Web</span><abbr title="Subversion" xml:lang="en"><span xml:lang="de">SVN</span></abbr></a>-Oberfläche benutzen. Jede Version des Spiels ist ebenfalls als <em>.tar.bz2</em>-Archiv gepackt und <a href="#archives">verfügbar</a>.]]></entry>
