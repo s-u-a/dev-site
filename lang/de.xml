@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <languagepack language="de">
 	<category name="general">
-		<entry name="title"><![CDATA[<span xml:lang="en"><abbr title="Stars under Attack">S-U-A</abbr> developers’</span>]]></entry>
+		<entry name="title"><![CDATA[<span xml:lang="en"><abbr title="Stars Under Attack">S-U-A</abbr> developers’</span>]]></entry>
 	</category>
 
 	<category name="navigation">
@@ -15,7 +15,7 @@
 	</category>
 
 	<category name="index">
-		<entry name="introduction"><![CDATA[<span xml:lbugs/ang="en">Stars Under Attack (<abbr title="Stars under Attack">S-U-A</abbr>)</span> ist ein <span xml:lang="en">Browser</span>spiel, das in <abbr title="Hypertext Preprocessor" xml:lang="en"><span xml:lang="de">PHP&thinsp;5</span></abbr> geschrieben ist. Das Hauptziel dieses Projekts gegenüber Anderen dieser Art ist, dass es durch die Befolgung der <abbr title="World Wide Web Consortium" xml:lang="en"><span xml:lang="de">W3C</span></abbr>-<abbr title="Web Accessibility Initiative" xml:lang="en"><span xml:lang="de">WAI</span></abbr>-Richtlinien benutzerfreundlicher aufgebaut ist. Es benutzt valides <abbr title="Extensible Markup Language" xml:lang="en"><span xml:lang="de">XHTML</span></abbr> 1.0 und versucht, ein einfach zu änderndes <span xml:lang="en">Design</span> durch die Benutzung von <abbr title="Cascading Stylesheets" xml:lang="en"><span xml:lang="de">CSS</span></abbr> zu haben. Benutzer haben viele Einstellungen, um das Spiel nach ihren Systemeinstellungen und ihrer verfügbaren <span xml:lang="en">Software</span> zu konfigurieren.]]></entry>
+		<entry name="introduction"><![CDATA[<span xml:lang="en">Stars Under Attack (<abbr title="Stars Under Attack">S-U-A</abbr>)</span> ist ein <span xml:lang="en">Browser</span>spiel, das in <abbr title="Hypertext Preprocessor" xml:lang="en"><span xml:lang="de">PHP&thinsp;5</span></abbr> geschrieben ist. Das Hauptziel dieses Projekts gegenüber Anderen dieser Art ist, dass es durch die Befolgung der <abbr title="World Wide Web Consortium" xml:lang="en"><span xml:lang="de">W3C</span></abbr>-<abbr title="Web Accessibility Initiative" xml:lang="en"><span xml:lang="de">WAI</span></abbr>-Richtlinien benutzerfreundlicher aufgebaut ist. Es benutzt valides <abbr title="Extensible Markup Language" xml:lang="en"><span xml:lang="de">XHTML</span></abbr> 1.0 und versucht, ein einfach zu änderndes <span xml:lang="en">Design</span> durch die Benutzung von <abbr title="Cascading Stylesheets" xml:lang="en"><span xml:lang="de">CSS</span></abbr> zu haben. Benutzer haben viele Einstellungen, um das Spiel nach ihren Systemeinstellungen und ihrer verfügbaren <span xml:lang="en">Software</span> zu konfigurieren.]]></entry>
 		<entry name="mailinglist-heading"><![CDATA[<span xml:lang="en">Mailing</span>liste]]></entry>
 		<entry name="mailinglist-text"><![CDATA[In unserer <span xml:lang="en">Mailing</span>liste können Sie neue <span xml:lang="en">Features</span> diskutieren oder <span xml:lang="en">Bugs</span> melden, über die Sie sich nicht sicher sind. Moderne <span xml:lang="en">Mailinglist-Clients</span> unterstützen eine <span xml:lang="en">Thread</span>-Ansicht, so dass die <span xml:lang="en">Mailing</span>liste ein Forum ersetzt.]]></entry>
 		<entry name="mailinglist-email"><![CDATA[<abbr title="Electronic" xml:lang="en">E</abbr>-<span xml:lang="en">Mail</span>-Adresse]]></entry>
@@ -24,7 +24,7 @@
 		<entry name="mailinglist-successful">Ihre Anfrage wurde erfolgreich ausgeführt.</entry>
 		<entry name="mailinglist-error">Ein Fehler trat während des Ausführens Ihrer Anfrage auf.</entry>
 		<entry name="chat-heading"><![CDATA[<span xml:lang="en">Chat</span>]]></entry>
-		<entry name="chat-text"><![CDATA[Der <span xml:lang="en">Chat</span> der Entwickler von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr> ist <a href="irc://%s/%s">#%2$s auf %1$s</a>. Sie können dort nahezu jederzeit einen Entwickler von <abbr title="Stars under Attack" xml:lang="en">S-U-A</abbr> finden.]]></entry>
+		<entry name="chat-text"><![CDATA[Der <span xml:lang="en">Chat</span> der Entwickler von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr> ist <a href="irc://%s/%s">#%2$s auf %1$s</a>. Sie können dort nahezu jederzeit einen Entwickler von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr> finden.]]></entry>
 	</category>
 
 	<category name="news">
