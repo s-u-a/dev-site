@@ -1,0 +1,34 @@
+#!/bin/bash
+
+beginning_cwd=`pwd`
+
+if [ $# -lt 1 ]; then
+	echo "Usage: $0 <version>"
+	exit 1
+fi
+
+cd /tmp
+if [ ! -d sua_repackage ]; then
+	mkdir sua_repackage
+fi
+
+cd sua_repackage
+
+if [ -e sua-$1 ]; then
+	rm -rf sua-$1
+fi
+
+if ! svn co svn://s-u-a.net/home/srv/svn/sua/tags/$1 sua-$1 > /dev/null; then
+	echo "Failed. Maybe your internet connection is broken or this version does not exist."
+	exit 1
+fi
+
+find sua-$1 -name ".svn" -type d -exec rm -rf {} \; 2> /dev/null
+
+tar -cjf $beginning_cwd/sua-$1.tar.bz2 sua-$1
+
+rm -rf sua-$1
+
+cd $beginning_cwd
+
+exit $?
