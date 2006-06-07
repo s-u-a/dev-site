@@ -26,15 +26,19 @@
 			$fnames[] = $fname;
 		}
 		closedir($dh);
+
+		if(count($fnames) <= 0) return true;
+
 		natcasesort($fnames);
+
+		global $i,$content;
 
 		foreach($fnames as $fname)
 		{
 			$path = $dname.$fname;
 			$file = file_get_contents($path);
 			$mailh = mailparse_msg_parse_file($path);
-			$structure = mailparse_msg_get_structure($mailh);
-			array_shift($structure);
+			$structure = mail_filter_structure(mailparse_msg_get_structure($mailh));
 			$mail_info = mailparse_msg_get_part_data($mailh);
 
 			$headers = $mail_info['headers'];
@@ -73,7 +77,44 @@
 			$query = sprintf("INSERT INTO mails ( fname, message_id, parent, sender, subject, time, content, headers ) VALUES ( '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s' );", sqlite_escape_string($fname), sqlite_escape_string($message_id), sqlite_escape_string($parent), sqlite_escape_string($from), sqlite_escape_string($subject), sqlite_escape_string($time), sqlite_escape_string(serialize($content)), sqlite_escape_string(serialize($headers)));
 			sqlite_query($db, $query);
 		}
+		unset($GLOBALS['content']);
+		unset($GLOBALS['i']);
+
+		mail_make_tree(true);
+
 		return true;
+	}
+
+	function mail_filter_structure($structure)
+	{
+		$structure_tree = array();
+		foreach($structure as $s)
+		{
+			$s = explode('.', $s);
+			$e = &$structure_tree;
+			foreach($s as $s1)
+			{
+				if(!isset($e[$s1])) $e[$s1] = array();
+				$e = &$e[$s1];
+			}
+			unset($e);
+		}
+		$filtered_structure = mail_filter_structure_callback($structure_tree);
+		return $filtered_structure;
+		
+	}
+
+	function mail_filter_structure_callback(&$tree, $prefix="")
+	{
+		$filtered = array();
+		foreach($tree as $i=>$t)
+		{
+			if(count($t) > 0)
+				$filtered = array_merge($filtered, mail_filter_structure_callback($t, $prefix.$i."."));
+			else
+				$filtered[] = $prefix.$i;
+		}
+		return $filtered;
 	}
 
 	function mail_part_callback($part)
@@ -93,8 +134,12 @@
 		return $string;
 	}
 
-	function mail_make_tree()
+	function mail_make_tree($force_reload=false)
 	{
+		$cache_fname = s_root.'/cache/mail_tree.ser';
+		if(!$force_reload && is_file($cache_fname) && is_readable($cache_fname))
+			return unserialize(file_get_contents($cache_fname));
+
 		$db = sqlite_popen(s_root."/cache/mail.sqlite");
 		if(!$db) return false;
 		$query = sqlite_query($db, "SELECT fname, message_id, parent, sender, subject, time FROM mails ORDER BY time ASC;");
@@ -121,7 +166,18 @@
 			unset($parent_mail);
 		}
 
-		return array(&$root, &$message_ids, &$fnames);
+		mail_reverse_tree($root);
+		$tree = array(&$root, &$message_ids, &$fnames);
+		if((!file_exists($cache_fname) && is_writable(dirname($cache_fname))) || (is_file($cache_fname) && is_writable($cache_fname)))
+			file_put_contents($cache_fname, serialize($tree));
+		return $tree;
+	}
+
+	function mail_reverse_tree(&$tree)
+	{
+		foreach($tree['sub'] as $k=>$v)
+			mail_reverse_tree($tree['sub'][$k]);
+		$tree['sub'] = array_reverse($tree['sub']);
 	}
 
 	function mail_make_links($string)
