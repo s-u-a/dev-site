@@ -9,12 +9,12 @@
 		foreach($mails as $mail)
 		{
 			echo $prefix."\t<li";
-			if($mail['fname'] == $active_fname) echo " class=\"active\"";
+			if($active_fname !== false && $mail['fname'] == $active_fname) echo " class=\"active\"";
 			echo "><a href=\"mailinglist.php?fname=".htmlspecialchars(urlencode($mail['fname']))."\" class=\"subject\">".htmlspecialchars($mail['subject'])."</a> ".$lang->getEntry('mailinglist', 'by')." <span class=\"mail-sender\">".mail_make_links(htmlspecialchars($mail['sender']))."</span>, <span class=\"mail-time\">".htmlspecialchars(date('Y-m-d, H:i:s', $mail['time']))."</span>";
 			if(count($mail['sub']) > 0)
 			{
 				echo "\n";
-				print_mails($mail['sub'], "\t\t".$prefix);
+				print_mails($mail['sub'], "\t\t".$prefix, $active_fname);
 				echo $prefix."\t</li>\n";
 			}
 			else echo "</li>\n";
