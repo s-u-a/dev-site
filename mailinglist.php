@@ -125,6 +125,7 @@
 			$mimetype = trim($mimetype);
 			$filename = 'attachment_'.$i;
 
+			$inline = ($i == 1);
 			if(isset($cinfo['headers']['content-disposition']))
 			{
 				$dp = explode(';', $cinfo['headers']['content-disposition']);
@@ -135,21 +136,28 @@
 					if(preg_match("/^filename=(.*)$/i", $dp[1], $match))
 						$filename = $match[1];
 				}
-				$inline = ($dp[0] == 'inline');
+				if(in_array($dp[0], array('attachment', 'inline')))
+					$inline = ($dp[0] == 'inline');
 			}
 ?>
 <div class="mail-part <?=($mimetype=='text/plain') ? 'text' : 'attachment'?>">
 	<h4><?=$lang->getEntry('mailinglist', 'mail-part')?>&nbsp;<?=htmlspecialchars($i)?>: <?=htmlspecialchars($mimetype)?></h3>
 <?php
-			if($mimetype == 'text/plain')
+			if($inline && $mimetype == 'text/plain')
 			{
 				# Show content
 ?>
 <pre>
 <?php
-				echo $cinfo['content']."\n";
+				echo htmlspecialchars($cinfo['content'])."\n";
 ?>
 </pre>
+<?php
+			}
+			elseif($inline && $mimetype == 'text/html')
+			{
+?>
+<iframe src="mailinglist.php?fname=<?=htmlspecialchars(urlencode($_GET['fname']))?>&amp;mimepart=<?=htmlspecialchars(urlencode($k))?>" />
 <?php
 			}
 			else
