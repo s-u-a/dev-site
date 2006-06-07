@@ -44,10 +44,11 @@
 			foreach($headers as $k=>$v)
 				$headers[$k] = mail_strip_encoded($v);
 			$from = (isset($headers['from']) ? $headers['from'] : false);
-			$subject = (isset($headers['subject']) ? $headers['subject'] : false);
+			$subject = ((isset($headers['subject']) && trim($headers['subject'])) ? $headers['subject'] : "[No subject]");
 			$message_id = (isset($headers['message-id']) ? $headers['message-id'] : false);
 			$parent = (isset($headers['in-reply-to']) ? $headers['in-reply-to'] : false);
-			$time = (isset($headers['date']) ? $headers['date'] : false);
+			if(!isset($headers['date']) || !($time = strtotime($headers['date'])))
+				$time = filemtime($dname.$fname);
 			$content = array();
 
 			$parts = array();
@@ -69,7 +70,7 @@
 
 			mailparse_msg_free($mailh);
 
-			$query = sprintf("INSERT INTO mails ( fname, message_id, parent, sender, subject, time, content, headers ) VALUES ( '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s' );", sqlite_escape_string($fname), sqlite_escape_string($message_id), sqlite_escape_string($parent), sqlite_escape_string($from), sqlite_escape_string($subject), sqlite_escape_string(strtotime($time)), sqlite_escape_string(serialize($content)), sqlite_escape_string(serialize($headers)));
+			$query = sprintf("INSERT INTO mails ( fname, message_id, parent, sender, subject, time, content, headers ) VALUES ( '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s' );", sqlite_escape_string($fname), sqlite_escape_string($message_id), sqlite_escape_string($parent), sqlite_escape_string($from), sqlite_escape_string($subject), sqlite_escape_string($time), sqlite_escape_string(serialize($content)), sqlite_escape_string(serialize($headers)));
 			sqlite_query($db, $query);
 		}
 		return true;
