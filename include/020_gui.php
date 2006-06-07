@@ -25,6 +25,7 @@
 			<li<?=_GUI_checkActive('skins')?' class="active"':''?>><a href="<?=h_root?>/skins"><?=$lang->getEntry('navigation', 'skins')?></a></li>
 			<li<?=_GUI_checkActive('download')?' class="active"':''?>><a href="<?=h_root?>/download"><?=$lang->getEntry('navigation', 'download')?></a></li>
 			<li<?=_GUI_checkActive('faq')?' class="active"':''?>><a href="<?=h_root?>/faq"><?=$lang->getEntry('navigation', 'faq')?></a></li>
+			<li<?=_GUI_checkActive('mailinglist')?' class="active"':''?>><a href="<?=h_root?>/mailinglist"><?=$lang->getEntry('navigation', 'mailinglist')?></a></li>
 			<li><a href="https://dev.s-u-a.net/bugs/"><?=$lang->getEntry('navigation', 'bugs')?></a></li>
 		</ol>
 		<div id="content">
@@ -37,7 +38,7 @@
 			}
 ?>
 <?php
-			ob_start();
+			#ob_start();
 			return true;
 		}
 
@@ -45,10 +46,10 @@
 		{
 			global $lang;
 
-			$content = ob_get_contents();
-			ob_end_clean();
+			#$content = ob_get_contents();
+			#ob_end_clean();
 
-			print "\t\t\t".str_replace("\n", "\n\t\t\t", $content)."\n";
+			#print "\t\t\t".str_replace("\n", "\n\t\t\t", $content)."\n";
 ?>
 		</div>
 		<ul id="languages">

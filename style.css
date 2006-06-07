@@ -52,3 +52,10 @@ strong { font-weight:bold; }
 
 cite { display:block; text-align:right; font-style:italic; }
 cite:before { content:"\2015\a0"; }
+
+#message-headers { border:1px solid #000; padding:5px; margin:1em 0; }
+.mail-part.text { font-family:monospace; }
+ol.mails { list-style-type:none; margin:0; padding:0; line-height:1.7em; }
+ol.mails ol { margin-left:3em; }
+ol.mails .subject { font-weight:700; }
+#content ol.mails .active > .subject { color:#000; text-decoration:none; }

@@ -12,6 +12,7 @@
 		<entry name="download">Download</entry>
 		<entry name="bugs">Bugtracker</entry>
 		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions">FAQ</abbr>]]></entry>
+		<entry name="mailinglist">Mailing list</entry>
 	</category>
 
 	<category name="index">
@@ -57,7 +58,14 @@
 		<entry name="no-archive">Currently no archive is available.</entry>
 	</category>
 
-	<category name="bugs">
-		<entry name="redirect"><![CDATA[This page is available on <a href="%s">%1$s</a>]]></entry>
+	<category name="mailinglist">
+		<entry name="no-message">This message does not exist.</entry>
+		<entry name="no-mimepart">This attachment does not exist.</entry>
+		<entry name="hide-headers">Hide message head</entry>
+		<entry name="show-headers">Show message head</entry>
+		<entry name="mail-part">Attachment</entry>
+		<entry name="by">by</entry>
+		<entry name="thread">Thread</entry>
+		<entry name="intro"><![CDATA[To post to the mailing list subscribe to it by sending an empty e-mail to <a href="mailto:%s">%1$s</a> and waiting for the confirmation mail. For further information and other commands send an empty message to <a href="mailto:%2$s">%2$s</a>.]]></entry>
 	</category>
 </languagepack>

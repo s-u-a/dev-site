@@ -12,6 +12,7 @@
 		<entry name="download">Herunterladen</entry>
 		<entry name="bugs"><![CDATA[<span xml:lang="en">Bugtracker</span>]]></entry>
 		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions" xml:lang="en"><span xml:lang="de">FAQ</span></abbr>]]></entry>
+		<entry name="mailinglist"><![CDATA[<span xml:lang="en">Mailing</span>-Liste]]></entry>
 	</category>
 
 	<category name="index">
@@ -31,7 +32,7 @@
 		<entry name="no-news">Derzeit sind keine Neuigkeiten vorhanden.</entry>
 		<entry name="no-title">Kein Titel</entry>
 	</category>
-	
+
 	<category name="credits">
 		<entry name="cdauth-work">Idee, Programmierung, Organisation und Verwaltung</entry>
 		<entry name="rmueller-work"><![CDATA[Finanzen, <span xml:lang="en">Design</span>, Hauptseite des Spiels, <span xml:lang="en">Items</span>, deutsche Übersetzung der Projektseite]]></entry>
@@ -53,11 +54,18 @@
 		<entry name="no-archive">Zur Zeit ist kein Archiv vefügbar.</entry>
 	</category>
 
-	<category name="bugs">
-		<entry name="redirect"><![CDATA[Diese Seite finden Sie unter <a href="%s">%1$s</a>]]></entry>
-	</category>
-
 	<category name="skins">
 		<entry name="introduction">Hier finden Sie die <![CDATA[<span xml:lang="en">Skins</span> von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr>]]>, die Sie hier herunterladen und nach Belieben bearbeiten können.</entry>
+	</category>
+
+	<category name="mailinglist">
+		<entry name="no-message">Diese Nachricht existiert nicht.</entry>
+		<entry name="no-mimepart">Dieser Anhang existiert nicht.</entry>
+		<entry name="hide-headers">Nachrichtenkopf ausblenden</entry>
+		<entry name="show-headers">Nachrichtenkopf einblenden</entry>
+		<entry name="mail-part">Anhang</entry>
+		<entry name="by">von</entry>
+		<entry name="thread"><![CDATA[<span xml:lang="en">Thread</span>]]></entry>
+		<entry name="intro"><![CDATA[Um der <span xml:lang="en">Mailing</span>-Liste einen Beitrag hinzuzufügen müssen Sie sie abonnieren, indem Sie eine leere <span xml:lang="en">E-Mail</span>-Nachricht an <a href="mailto:%s">%1$s</a> schreiben und die Bestätigungsantwort abwarten. Für genauere Informationen und weitere Kommandos senden Sie eine leere Nachricht an <a href="mailto:%2$s">%2$s</a>.]]></entry>
 	</category>
 </languagepack>
