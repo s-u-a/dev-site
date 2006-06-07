@@ -154,7 +154,7 @@
 </pre>
 <?php
 			}
-			elseif($inline && $mimetype == 'text/html')
+			elseif($inline && ($mimetype == 'text/html' || $mimetype == 'application/xhtml+xml'))
 			{
 ?>
 <iframe src="mailinglist.php?fname=<?=htmlspecialchars(urlencode($_GET['fname']))?>&amp;mimepart=<?=htmlspecialchars(urlencode($k))?>" />
