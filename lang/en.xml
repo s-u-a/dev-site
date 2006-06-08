@@ -19,13 +19,6 @@
 		<entry name="introduction"><![CDATA[Stars Under Attack (S-U-A) is a browser game written in <abbr title="Hypertext Preprocessor">PHP&thinsp;5</abbr>. The main goal of this project is to be more user friendly than other games of this kind by following the <abbr title="World Wide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> guidelines. It uses valid <abbr title="Extensible Markup Language">XHTML</abbr> 1.0 and tries to be flexibly changable using <abbr title="Cascading Stylesheets">CSS</abbr>. Users have got many settings to use the game according to their preferences and available software.]]></entry>
 		<entry name="chat-heading">Chat</entry>
 		<entry name="chat-text"><![CDATA[The game developers’ chat is available on <a href="irc://%s/%s">#%2$s on %1$s</a>. You can meet a developer there nearly at every time of day.]]></entry>
-		<entry name="mailinglist-heading">Mailing list</entry>
-		<entry name="mailinglist-text">In our mailing list, you can discuss new features or report bugs that you’re not sure about. Modern mail clients support threaded view, so the mailing list replaces a forum.</entry>
-		<entry name="mailinglist-email">E-mail address</entry>
-		<entry name="mailinglist-subscribe">Subscribe</entry>
-		<entry name="mailinglist-unsubscribe">Unsubscribe</entry>
-		<entry name="mailinglist-successful">The requested action has been performed successfully.</entry>
-		<entry name="mailinglist-error">An error occured during performing the requested action.</entry>
 	</category>
 
 	<category name="news">
@@ -66,6 +59,12 @@
 		<entry name="mail-part">Attachment</entry>
 		<entry name="by">by</entry>
 		<entry name="thread">Thread</entry>
-		<entry name="intro"><![CDATA[To post to the mailing list subscribe to it by sending an empty e-mail to <a href="mailto:%s">%1$s</a> and waiting for the confirmation mail. For further information and other commands send an empty message to <a href="mailto:%2$s">%2$s</a>.]]></entry>
+		<entry name="intro-1">In our mailing list, you can discuss new features or report bugs that you’re not sure about. Modern mail clients support threaded view, so the mailing list replaces a forum.</entry>
+		<entry name="intro-2">This is the archive of the mailing list. You can read all articles that have been posted here using your web browser.</entry>
+		<entry name="email">E-mail address</entry>
+		<entry name="subscribe">Subscribe</entry>
+		<entry name="unsubscribe">Unsubscribe</entry>
+		<entry name="successful">The requested action has been performed successfully.</entry>
+		<entry name="error">An error occured during performing the requested action.</entry>
 	</category>
 </languagepack>

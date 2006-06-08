@@ -202,8 +202,40 @@
 	{
 		# Show message list
 		$gui->htmlHead();
+
+		if(isset($_POST['email']) && strlen(trim($_POST['email'])) > 0)
+		{
+			if(eregi("^[a-z0-9\._-]+".chr(64)."+[a-z0-9\._-]+\.+[a-z]{2,4}$", $_POST['email']) && mailinglist_action('sua-dev+'.((isset($_POST['unsubscribe']) && $_POST['unsubscribe']) ? 'unsubscribe' : 'subscribe').'@s-u-a.net', $_POST['email']))
+			{
 ?>
-<p class="mailinglist-intro"><?=$lang->getEntry('mailinglist', 'intro', 'sua-dev+subscribe@s-u-a.net', 'sua-dev+help@s-u-a.net')?></p>
+<p class="successful"><?=$lang->getEntry('mailinglist', 'successful')?></p>
+<?php
+			}
+			else
+			{
+?>
+<p class="error"><?=$lang->getEntry('mailinglist', 'error')?></p>
+<?php
+			}
+		}
+		else
+		{
+?>
+<p class="mailinglist-intro-1"><?=$lang->getEntry('mailinglist', 'intro-1')?></p>
+<?php
+		}
+?>
+<form action="<?=h_root?>/" method="post" class="mailinglist-subscribe">
+	<dl>
+		<dt><label for="i-email"><?=$lang->getEntry('mailinglist', 'email')?></label></dt>
+		<dd><input type="text" name="email" id="i-email" /></dd>
+	</dl>
+	<ul>
+		<li><button type="submit"><?=$lang->getEntry('mailinglist', 'subscribe')?></button></li>
+		<li><button name="unsubscribe" type="submit" value="1"><?=$lang->getEntry('mailinglist', 'unsubscribe')?></button></li>
+	</ul>
+</form>
+<p class="mailinglist-intro-2"><?=$lang->getEntry('mailinglist', 'intro-2')?></p>
 <?php
 		print_mails($tree[0]['sub']);
 		$gui->htmlFoot();

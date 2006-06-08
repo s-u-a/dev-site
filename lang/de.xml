@@ -17,13 +17,6 @@
 
 	<category name="index">
 		<entry name="introduction"><![CDATA[<span xml:lang="en">Stars Under Attack (<abbr title="Stars Under Attack">S-U-A</abbr>)</span> ist ein <span xml:lang="en">Browser</span>spiel, das in <abbr title="Hypertext Preprocessor" xml:lang="en"><span xml:lang="de">PHP&thinsp;5</span></abbr> geschrieben ist. Das Hauptziel dieses Projekts gegenüber Anderen dieser Art ist, dass es durch die Befolgung der <abbr title="World Wide Web Consortium" xml:lang="en"><span xml:lang="de">W3C</span></abbr>-<abbr title="Web Accessibility Initiative" xml:lang="en"><span xml:lang="de">WAI</span></abbr>-Richtlinien benutzerfreundlicher aufgebaut ist. Es benutzt valides <abbr title="Extensible Markup Language" xml:lang="en"><span xml:lang="de">XHTML</span></abbr> 1.0 und versucht, ein einfach zu änderndes <span xml:lang="en">Design</span> durch die Benutzung von <abbr title="Cascading Stylesheets" xml:lang="en"><span xml:lang="de">CSS</span></abbr> zu haben. Benutzer haben viele Einstellungen, um das Spiel nach ihren Systemeinstellungen und ihrer verfügbaren <span xml:lang="en">Software</span> zu konfigurieren.]]></entry>
-		<entry name="mailinglist-heading"><![CDATA[<span xml:lang="en">Mailing</span>liste]]></entry>
-		<entry name="mailinglist-text"><![CDATA[In unserer <span xml:lang="en">Mailing</span>liste können Sie neue <span xml:lang="en">Features</span> diskutieren oder <span xml:lang="en">Bugs</span> melden, über die Sie sich nicht sicher sind. Moderne <span xml:lang="en">Mailinglist-Clients</span> unterstützen eine <span xml:lang="en">Thread</span>-Ansicht, so dass die <span xml:lang="en">Mailing</span>liste ein Forum ersetzt.]]></entry>
-		<entry name="mailinglist-email"><![CDATA[<abbr title="Electronic" xml:lang="en">E</abbr>-<span xml:lang="en">Mail</span>-Adresse]]></entry>
-		<entry name="mailinglist-subscribe">Anmelden</entry>
-		<entry name="mailinglist-unsubscribe">Abmelden</entry>
-		<entry name="mailinglist-successful">Ihre Anfrage wurde erfolgreich ausgeführt.</entry>
-		<entry name="mailinglist-error">Ein Fehler trat während des Ausführens Ihrer Anfrage auf.</entry>
 		<entry name="chat-heading"><![CDATA[<span xml:lang="en">Chat</span>]]></entry>
 		<entry name="chat-text"><![CDATA[Der <span xml:lang="en">Chat</span> der Entwickler von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr> ist <a href="irc://%s/%s">#%2$s auf %1$s</a>. Sie können dort nahezu jederzeit einen Entwickler von <abbr title="Stars Under Attack" xml:lang="en">S-U-A</abbr> finden.]]></entry>
 	</category>
@@ -66,6 +59,12 @@
 		<entry name="mail-part">Anhang</entry>
 		<entry name="by">von</entry>
 		<entry name="thread"><![CDATA[<span xml:lang="en">Thread</span>]]></entry>
-		<entry name="intro"><![CDATA[Um der <span xml:lang="en">Mailing</span>-Liste einen Beitrag hinzuzufügen müssen Sie sie abonnieren, indem Sie eine leere <span xml:lang="en">E-Mail</span>-Nachricht an <a href="mailto:%s">%1$s</a> schreiben und die Bestätigungsantwort abwarten. Für genauere Informationen und weitere Kommandos senden Sie eine leere Nachricht an <a href="mailto:%2$s">%2$s</a>.]]></entry>
+		<entry name="intro-1"><![CDATA[In unserer <span xml:lang="en">Mailing</span>liste können Sie neue <span xml:lang="en">Features</span> diskutieren oder <span xml:lang="en">Bugs</span> melden, über die Sie sich nicht sicher sind. Moderne <span xml:lang="en">Mailinglist-Clients</span> unterstützen eine <span xml:lang="en">Thread</span>-Ansicht, so dass die <span xml:lang="en">Mailing</span>liste ein Forum ersetzt.]]></entry>
+		<entry name="intro-2"><![CDATA[Das hier ist das Archiv der <span xml:lang="en">Mailing</span>-Liste. Hier kann man alle Beiträge, die in der Liste geschrieben wurden, mithilfe des <span xml:lang="en">Webbrowser</span>s nachlesen.]]></entry>
+		<entry name="email"><![CDATA[<abbr title="Electronic" xml:lang="en">E</abbr>-<span xml:lang="en">Mail</span>-Adresse]]></entry>
+		<entry name="subscribe">Anmelden</entry>
+		<entry name="unsubscribe">Abmelden</entry>
+		<entry name="successful">Ihre Anfrage wurde erfolgreich ausgeführt.</entry>
+		<entry name="error">Ein Fehler trat während des Ausführens Ihrer Anfrage auf.</entry>
 	</category>
 </languagepack>
