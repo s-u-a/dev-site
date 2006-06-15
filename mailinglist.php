@@ -141,7 +141,7 @@
 			}
 ?>
 <div class="mail-part <?=($mimetype=='text/plain') ? 'text' : 'attachment'?>">
-	<h4><?=$lang->getEntry('mailinglist', 'mail-part')?>&nbsp;<?=htmlspecialchars($i)?>: <?=htmlspecialchars($mimetype)?></h3>
+	<h4><?=$lang->getEntry('mailinglist', 'mail-part')?>&nbsp;<?=htmlspecialchars($i)?>: <?=htmlspecialchars($mimetype)?></h4>
 <?php
 			if($inline && $mimetype == 'text/plain')
 			{
