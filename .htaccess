@@ -1,3 +1,6 @@
+Order allow,deny
+Allow From All
+
 Options +MultiViews
 
 RewriteEngine on
@@ -20,3 +23,10 @@ AddOutputFilter DEFLATE css
 AcceptPathInfo Default
 
 RewriteRule ^websvn/templates/(.*)$ /wsvn.templates/$1
+
+ErrorDocument 403 /503_unavailable.php
+<Files 503_unavailable.php>
+	Deny From None
+</Files>
+
+#Deny From All
