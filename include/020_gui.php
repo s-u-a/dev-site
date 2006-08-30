@@ -24,8 +24,8 @@
 			<li<?=_GUI_checkActive('credits')?' class="active"':''?>><a href="<?=h_root?>/credits"><?=$lang->getEntry('navigation', 'credits')?></a></li>
 			<li<?=_GUI_checkActive('skins')?' class="active"':''?>><a href="<?=h_root?>/skins"><?=$lang->getEntry('navigation', 'skins')?></a></li>
 			<li<?=_GUI_checkActive('download')?' class="active"':''?>><a href="<?=h_root?>/download"><?=$lang->getEntry('navigation', 'download')?></a></li>
-			<li<?=_GUI_checkActive('faq')?' class="active"':''?>><a href="<?=h_root?>/faq"><?=$lang->getEntry('navigation', 'faq')?></a></li>
 			<li<?=_GUI_checkActive('mailinglist')?' class="active"':''?>><a href="<?=h_root?>/mailinglist"><?=$lang->getEntry('navigation', 'mailinglist')?></a></li>
+			<li><a href="<?=real_h_root?>/suadev_wiki_<?=htmlspecialchars($lang->getSelectedLanguage())?>"><?=$lang->getEntry('navigation', 'wiki')?></a></li>
 			<li><a href="https://dev.s-u-a.net/bugs/"><?=$lang->getEntry('navigation', 'bugs')?></a></li>
 		</ol>
 		<div id="content">

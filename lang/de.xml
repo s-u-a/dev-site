@@ -11,8 +11,8 @@
 		<entry name="skins"><![CDATA[<span xml:lang="en">Skins</span>]]></entry>
 		<entry name="download">Herunterladen</entry>
 		<entry name="bugs"><![CDATA[<span xml:lang="en">Bugtracker</span>]]></entry>
-		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions" xml:lang="en"><span xml:lang="de">FAQ</span></abbr>]]></entry>
 		<entry name="mailinglist"><![CDATA[<span xml:lang="en">Mailing</span>-Liste]]></entry>
+		<entry name="wiki">Wiki</entry>
 	</category>
 
 	<category name="index">

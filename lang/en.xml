@@ -11,8 +11,8 @@
 		<entry name="skins">Skins</entry>
 		<entry name="download">Download</entry>
 		<entry name="bugs">Bugtracker</entry>
-		<entry name="faq"><![CDATA[<abbr title="Frequently Asked Questions">FAQ</abbr>]]></entry>
 		<entry name="mailinglist">Mailing list</entry>
+		<entry name="wiki">Wiki</entry>
 	</category>
 
 	<category name="index">
