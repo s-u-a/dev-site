@@ -15,6 +15,7 @@
 		<style type="text/css">
 			@import url(<?=real_h_root?>/style.css);
 		</style>
+		<link rel="favorite icon" href="<?=real_h_root?>/images/favicon.png" type="image/png" />
 	</head>
 	<body>
 		<h1><span><?=$lang->getEntry('general', 'title')?></span></h1>
