@@ -1,12 +1,14 @@
 Order allow,deny
 Allow From All
 
-Options +MultiViews
-
 RewriteEngine on
+RewriteBase /
 RewriteCond %{REQUEST_URI} ^/de/ [OR]
 RewriteCond %{REQUEST_URI} ^/en/
 RewriteRule ^([^/]+)/(.*)$ /$2 [E=SUADEV_LANGUAGE:$1] [L]
+RewriteCond %{REQUEST_URI} ^/[^/.]+$
+RewriteCond %{REQUEST_URI} !^/wsvn
+RewriteRule ^.*$ $0.php [L]
 
 ExpiresActive on
 ExpiresByType text/css "access plus 2 week"
@@ -22,11 +24,13 @@ AddOutputFilter DEFLATE css
 
 AcceptPathInfo Default
 
-RewriteRule ^websvn/templates/(.*)$ /wsvn.templates/$1
-
 ErrorDocument 403 /503_unavailable.php
 <Files 503_unavailable.php>
 	Deny From None
 </Files>
 
 #Deny From All
+
+<Files wsvn>
+	ForceType application/x-httpd-cgi
+</Files>
