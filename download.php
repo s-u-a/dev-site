@@ -10,7 +10,7 @@
 <p><?=$lang->getEntry('download', 'svn-text', 'svn://s-u-a.net/home/srv/svn/sua')?></p>
 
 <h3 id="websvn"><?=$lang->getEntry('download', 'websvn-heading')?></h3>
-<p><?=$lang->getEntry('download', 'websvn-text', real_h_root.'/wsvn/Stars%20Under%20Attack/')?></p>
+<p><?=$lang->getEntry('download', 'websvn-text', "http://svn.s-u-a.net/")?></p>
 
 <?php
 	$archives = array();
