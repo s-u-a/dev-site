@@ -14,19 +14,44 @@
 
 <?php
 	$archives = array();
-	if(is_dir('releases') && is_readable('releases'))
+	if(is_dir('download.raw') && is_readable('download.raw'))
 	{
-		$dh = opendir('releases');
-		while(($fname = readdir($dh)) !== false)
+		if(!is_writable("download.raw") || !execute("svn up download.raw"))
+			notice("Could not svn update download.raw/");
+
+		$dh = opendir('download.raw');
+		while(($dir = readdir($dh)) !== false)
 		{
-			if($fname[0] == '.' || $fname[0] == '#') continue;
-			if(!is_file('releases/'.$fname) || !is_readable('releases/'.$fname)) continue;
-			$archives[$fname] = filemtime('releases/'.$fname);
+			if($dir[0] == '#' || $dir[0] == '.') continue;
+			if(!is_dir('download.raw/'.$dir) || !is_readable('download.raw/'.$dir)) continue;
+			$archives[] = $dir;
 		}
 		closedir($dh);
 	}
-	arsort($archives, SORT_NUMERIC);
-	$archives = array_keys($archives);
+
+	if(isset($_GET['version']) && in_array($_GET["version"], $archives))
+	{
+		if(!is_dir('cache') && (file_exists('cache') || !is_writeable('.') || !mkdir('cache', 0770)))
+			notice("Could not create /cache/.");
+		elseif(!is_dir('cache/download') && (file_exists('cache/download') || !is_writeable('cache') || !mkdir('cache/download', 0770)))
+			notice("Could not create /cache/download/");
+		else
+		{
+			$old_cwd = getcwd();
+			chdir('download.raw');
+			if((is_file('../cache/download/sua_'.$_GET['version'].'.7z') && !is_writeable('../cache/download')) || ((!is_file('../cache/download/sua_'.$_GET['version'].'.7z') || filemtime('../cache/download/sua_'.$_GET['version'].'.7z') < last_filemtime($_GET['version'])) && !z7("../cache/download/sua_".$_GET['version'].".7z", $_GET['version'])))
+				notice("Could not create /cache/download/sua_".$_GET['version'].".7z");
+			else
+			{
+				header('Location: '.h_root.'/cache/download/sua_'.$_GET['version'].'.7z', true, 307);
+				die();
+			}
+			chdir($old_cwd);
+		}
+	}
+
+	natcasesort($archives);
+	$archives = array_reverse($archives);
 	$current = array_shift($archives);
 ?>
 <h3 id="archives"><?=$lang->getEntry('download', 'archives-heading')?></h3>
@@ -37,7 +62,7 @@
 	{
 ?>
 <ul>
-	<li><a href="releases/<?=htmlspecialchars($current)?>"><?=htmlspecialchars($current)?></a></li>
+	<li><a href="?version=<?=htmlspecialchars(urlencode($current))?>"><?=htmlspecialchars($current)?></a></li>
 </ul>
 <?php
 	}
@@ -57,7 +82,7 @@
 		foreach($archives as $archive)
 		{
 ?>
-	<li><a href="releases/<?=htmlspecialchars($archive)?>"><?=htmlspecialchars($archive)?></a></li>
+	<li><a href="?version=<?=htmlspecialchars(urlencode($archive))?>"><?=htmlspecialchars($archive)?></a></li>
 <?php
 		}
 ?>

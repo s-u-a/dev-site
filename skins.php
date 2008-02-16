@@ -2,14 +2,24 @@
 	include('include.php');
 
 	$skins = array();
-	if(is_dir('skins.unpacked') && is_readable('skins.unpacked'))
+	if(is_dir('skins.raw') && is_readable('skins.raw'))
 	{
-		$dh = opendir('skins.unpacked');
+		if(!is_writable("skins.raw") || !execute("svn up skins.raw"))
+			notice("Could not svn update skins.raw/");
+
+		$dh = opendir('skins.raw');
 		while(($dir = readdir($dh)) !== false)
 		{
 			if($dir[0] == '#' || $dir[0] == '.') continue;
-			if(!is_dir('skins.unpacked/'.$dir) || !is_readable('skins.unpacked/'.$dir) || !is_file('skins.unpacked/'.$dir.'/.name') || !is_readable('skins.unpacked/'.$dir.'/.name')) continue;
-			$skins[$dir] = file_get_contents('skins.unpacked/'.$dir.'/.name');
+			if(!is_dir('skins.raw/'.$dir) || !is_readable('skins.raw/'.$dir)) continue;
+			$name = null;
+			if(is_file('skins.raw/'.$dir.'/types') && is_readable('skins.raw/'.$dir.'/types'))
+			{
+				$fh_types = fopen("skins.raw/".$dir."/types", "r");
+				$name = trim(fgets($fh_types));
+				fclose($fh_types);
+			}
+			$skins[$dir] = ($name ? $name : $dir);
 		}
 		closedir($dh);
 	}
@@ -23,12 +33,12 @@
 		else
 		{
 			$old_cwd = getcwd();
-			chdir('skins.unpacked');
-			if((is_file('../cache/skins/'.$_GET['skin'].'.tar.bz2') && !is_writeable('../cache/skins')) || ((!is_file('../cache/skins/'.$_GET['skin'].'.tar.bz2') || filemtime('../cache/skins/'.$_GET['skin'].'.tar.bz2') < last_filemtime($_GET['skin'])) && !execute('tar -cjhf ../cache/skins/'.$_GET['skin'].'.tar.bz2 '.$_GET['skin'])))
-				notice("Could not create /cache/skins/".$_GET['skin'].".tar.bz2");
+			chdir('skins.raw');
+			if((is_file('../cache/skins/sua_skin_'.$_GET['skin'].'.7z') && !is_writeable('../cache/skins')) || ((!is_file('../cache/skins/sua_skin_'.$_GET['skin'].'.7z') || filemtime('../cache/skins/sua_skin_'.$_GET['skin'].'.7z') < last_filemtime($_GET['skin'])) && !z7("../cache/skins/sua_skin_".$_GET['skin'].".7z", $_GET['skin'])))
+				notice("Could not create /cache/skins/sua_skin_".$_GET['skin'].".7z");
 			else
 			{
-				header('Location: '.h_root.'/cache/skins/'.$_GET['skin'].'.tar.bz2', true, 307);
+				header('Location: '.h_root.'/cache/skins/sua_skin_'.$_GET['skin'].'.7z', true, 307);
 				die();
 			}
 			chdir($old_cwd);
@@ -44,7 +54,7 @@
 	foreach($skins as $dir=>$skin)
 	{
 ?>
-	<li><a href="skins.php?skin=<?=htmlspecialchars(urlencode($dir))?>"><?=htmlspecialchars(trim($skin))?></a></li>
+	<li><a href="?skin=<?=htmlspecialchars(urlencode($dir))?>"><?=htmlspecialchars(trim($skin))?></a></li>
 <?php
 	}
 ?>

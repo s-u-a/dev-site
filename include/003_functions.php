@@ -24,6 +24,11 @@
 		return ($return == "0");
 	}
 
+	function z7($filename, $dir)
+	{
+		return execute("find ".escapeshellarg($dir)." -type f | grep -v '/\.svn/' | xargs 7z a ".escapeshellarg($filename));
+	}
+
 	function parseNewsXML($fname)
 	{
 		if(!is_file($fname) || !is_readable($fname)) return false;
