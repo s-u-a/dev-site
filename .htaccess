@@ -7,7 +7,6 @@ RewriteCond %{REQUEST_URI} ^/de/ [OR]
 RewriteCond %{REQUEST_URI} ^/en/
 RewriteRule ^([^/]+)/(.*)$ /$2 [E=SUADEV_LANGUAGE:$1] [L]
 RewriteCond %{REQUEST_URI} ^/[^/.]+$
-RewriteCond %{REQUEST_URI} !^/wsvn
 RewriteRule ^.*$ $0.php [L]
 
 ExpiresActive on

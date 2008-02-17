@@ -51,7 +51,9 @@
 
 			if($language === false)
 			{ # Automatically figure out language by using HTTP_ACCEPT_LANGUAGE
-				if(isset($_SERVER['REDIRECT_SUADEV_LANGUAGE']) && isset($this->languageData['languages'][$_SERVER['REDIRECT_SUADEV_LANGUAGE']]))
+				if(isset($_ENV['REDIRECT_REDIRECT_SUADEV_LANGUAGE']) && isset($this->languageData['languages'][$_ENV['REDIRECT_REDIRECT_SUADEV_LANGUAGE']]))
+					$language = $_ENV['REDIRECT_REDIRECT_SUADEV_LANGUAGE'];
+				elseif(isset($_SERVER['REDIRECT_SUADEV_LANGUAGE']) && isset($this->languageData['languages'][$_SERVER['REDIRECT_SUADEV_LANGUAGE']]))
 					$language = $_SERVER['REDIRECT_SUADEV_LANGUAGE'];
 				else
 				{
