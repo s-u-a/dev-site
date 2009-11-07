@@ -26,7 +26,7 @@
 
 	function z7($filename, $dir)
 	{
-		return execute("find ".escapeshellarg($dir)." -type f | grep -v '/\.svn/' | xargs 7zr a ".escapeshellarg($filename));
+		return execute("find ".escapeshellarg($dir)." -type f | grep -v '/\.svn/' | xargs 7z a ".escapeshellarg($filename));
 	}
 
 	function parseNewsXML($fname)
