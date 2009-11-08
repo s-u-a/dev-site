@@ -16,9 +16,6 @@
 	$archives = array();
 	if(is_dir('download.raw') && is_readable('download.raw'))
 	{
-		if(!is_writable("download.raw") || !execute("svn up download.raw"))
-			notice("Could not svn update download.raw/");
-
 		$dh = opendir('download.raw');
 		while(($dir = readdir($dh)) !== false)
 		{

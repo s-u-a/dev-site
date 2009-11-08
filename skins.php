@@ -4,9 +4,6 @@
 	$skins = array();
 	if(is_dir('skins.raw') && is_readable('skins.raw'))
 	{
-		if(!is_writable("skins.raw") || !execute("svn up skins.raw"))
-			notice("Could not svn update skins.raw/");
-
 		$dh = opendir('skins.raw');
 		while(($dir = readdir($dh)) !== false)
 		{
