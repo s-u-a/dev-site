@@ -39,13 +39,13 @@
 	</category>
 
 	<category name="download">
-		<entry name="introduction"><![CDATA[<abbr title="Stars Under Attack">S-U-A</abbr> uses <abbr title="Subversion">SVN</abbr> for version control. See <a href="#svn">below</a> where to find our repository. If you haven’t got a <abbr title="Subversion">SVN</abbr> client, you can also access our repository via the <a href="#websvn">Web<abbr title="Subversion">SVN</abbr></a> interface. Every version is also packed and <a href="#archives">available</a> as a <em>.tar.bz2</em> archive.]]></entry>
-		<entry name="svn-heading"><![CDATA[<abbr title="Subversion">SVN</abbr>]]></entry>
-		<entry name="svn-text"><![CDATA[Our <abbr title="Subversion">SVN</abbr> repository can be found on <a href="%s">%1$s</a>. Please mind that the developers also use this repository to exchange current, untested changes. It might be that the version from our <abbr title="Subversion">SVN</abbr> trunk doesn’t work at all.]]></entry>
-		<entry name="websvn-heading"><![CDATA[Web<abbr title="Subversion">SVN</abbr>]]></entry>
-		<entry name="websvn-text"><![CDATA[If your browser doesn’t support <abbr title="Subversion">SVN</abbr>, or you just want see a file or compare two versions, the Web<abbr title="Subversion">SVN</abbr> interface is <a href="%s">available</a> via <abbr title="Hypertext Transfer Protocol">HTTP</abbr>.]]></entry>
+		<entry name="introduction"><![CDATA[<abbr title="Stars Under Attack">S-U-A</abbr> uses Git for version control. See <a href="#git">below</a> where to find our repository. If you haven’t got a Git client, you can also access our repository via a <a href="#webgit">Web</a> interface. Every version is also packed and <a href="#archives">available</a> as a 7-Zip archive.]]></entry>
+		<entry name="git-heading"><![CDATA[Git]]></entry>
+		<entry name="git-text"><![CDATA[Our Git repository can be found on <a href="%s">%1$s</a>. Please mind that the developers also use this repository to exchange current, untested changes. It might be that the version from our Git trunk doesn’t work at all.]]></entry>
+		<entry name="webgit-heading"><![CDATA[WebGit]]></entry>
+		<entry name="webgit-text"><![CDATA[If your browser doesn’t support Git, or you just want see a file or compare two versions, the WebGit interface is <a href="%s">available</a> via <abbr title="Hypertext Transfer Protocol">HTTP</abbr>.]]></entry>
 		<entry name="archives-heading">Packages</entry>
-		<entry name="archives-text"><![CDATA[Each time a tag in our <abbr title="Subversion">SVN</abbr> repository is created, the content of the trunk is also packed into a <em>.tar.bz2</em> archive. You can download these archives here, but please mind that such a package might not contain the newest bug fixes.]]></entry>
+		<entry name="archives-text"><![CDATA[Each time a tag in our Git repository is created, the content of the trunk is also packed into a 7-Zip archive. You can download these archives here, but please mind that such a package might not contain the newest bug fixes.]]></entry>
 		<entry name="current-archive">Current version</entry>
 		<entry name="old-archives">Attic</entry>
 		<entry name="no-archive">Currently no archive is available.</entry>

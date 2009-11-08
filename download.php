@@ -6,11 +6,11 @@
 ?>
 <p><?=$lang->getEntry('download', 'introduction')?></p>
 
-<h3 id="svn"><?=$lang->getEntry('download', 'svn-heading')?></h3>
-<p><?=$lang->getEntry('download', 'svn-text', 'svn://s-u-a.net/home/srv/svn/sua')?></p>
+<h3 id="git"><?=$lang->getEntry('download', 'git-heading')?></h3>
+<p><?=$lang->getEntry('download', 'git-text', 'git://gitorious.org/sua/sua.git')?></p>
 
-<h3 id="websvn"><?=$lang->getEntry('download', 'websvn-heading')?></h3>
-<p><?=$lang->getEntry('download', 'websvn-text', "http://svn.s-u-a.net/")?></p>
+<h3 id="webgit"><?=$lang->getEntry('download', 'webgit-heading')?></h3>
+<p><?=$lang->getEntry('download', 'webgit-text', "http://gitorious.org/sua/sua/trees/master")?></p>
 
 <?php
 	$archives = array();
