@@ -1,0 +1,3 @@
+[submodule "skins.raw/default"]
+	path = skins.raw/default
+	url = git://gitorious.org/sua/skin_default.git
